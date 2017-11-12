@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FranceVacancesCentaurosTeam.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace FranceVacancesCentaurosTeam
@@ -22,9 +24,25 @@ namespace FranceVacancesCentaurosTeam
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        //private List<apartments> ApartmentList;
+
+        private List<Apartment> Apartments;
+
         public MainPage()
         {
             this.InitializeComponent();
+            Apartments = ApartmentManager.GetApartment();
+            //ApartmentList = ListApartments.ChooseApartment();
         }
+
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        //}
+
+        //private void Button_Click_1(object sender, RoutedEventArgs e)
+        //{
+        //    MyApartmentSplitView.IsPaneOpen = !MyApartmentSplitView.IsPaneOpen;
+       // }
     }
 }
