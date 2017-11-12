@@ -95,7 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Commands\RelayCommands.cs" />
     <Compile Include="Model\Apartment.cs" />
     <Compile Include="Model\City.cs" />
     <Compile Include="Model\Owner.cs" />
@@ -125,8 +125,6 @@
     <Content Include="Assets\Apartment\chamonix2aMain.jpg" />
     <Content Include="Assets\Apartment\chamonix2b.jpg" />
     <Content Include="Assets\Apartment\chamonix2c.jpg" />
-    <Content Include="Assets\Apartment\Lyon 1.png" />
-    <Content Include="Assets\Apartment\Lyon 2.png" />
     <Content Include="Assets\Apartment\lyon1aMain.jpg" />
     <Content Include="Assets\Apartment\lyon1b.jpg" />
     <Content Include="Assets\Apartment\lyon1c.jpg" />

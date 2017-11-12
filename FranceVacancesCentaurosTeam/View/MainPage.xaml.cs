@@ -32,17 +32,17 @@ namespace FranceVacancesCentaurosTeam
         {
             this.InitializeComponent();
             Apartments = ApartmentManager.GetApartment();
-            //ApartmentList = ListApartments.ChooseApartment();
         }
 
-        //private void Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //    MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
-        //}
 
-        //private void Button_Click_1(object sender, RoutedEventArgs e)
-        //{
-        //    MyApartmentSplitView.IsPaneOpen = !MyApartmentSplitView.IsPaneOpen;
-       // }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MyApartmentSplitView.IsPaneOpen = !MyApartmentSplitView.IsPaneOpen;
+        }
     }
 }
