@@ -149,8 +149,10 @@
     <Content Include="Assets\Apartment\nice2aMain.jpg" />
     <Content Include="Assets\Apartment\nice2e.jpg" />
     <Content Include="Assets\Apartment\nice2vb.jpg" />
+    <Content Include="Assets\blue-wood-texture-background 2.jpg" />
     <Content Include="Assets\FRanceVacancesLogo1.png" />
     <Content Include="Assets\FranceVacancesPortrait.jpg" />
+    <Content Include="Assets\Turquoise Wall.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

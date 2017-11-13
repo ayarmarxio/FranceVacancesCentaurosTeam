@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
         
         <Grid.Background>
-            <ImageBrush ImageSource="ms-appx:///Assets/FranceVacancesPortrait.jpg" Stretch="UniformToFill" />
+            <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill" />
         </Grid.Background>
    
         <Image Source="ms-appx:///Assets/FRanceVacancesLogo1.png" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" Stretch="Uniform"/>
