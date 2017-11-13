@@ -10,6 +10,7 @@ namespace FranceVacancesCentaurosTeam.Assets.Commands
     class RelayCommand : ICommand
         {
         
+
         public event EventHandler CanExecuteChanged;
 
               
