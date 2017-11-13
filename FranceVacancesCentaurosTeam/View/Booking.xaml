@@ -1,13 +1,50 @@
 ﻿<Page
-    x:Class="FranceVacancesCentaurosTeam.View.Booking"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:FranceVacancesCentaurosTeam.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Model="using:FranceVacancesCentaurosTeam.Model"
+    x:Class="FranceVacancesCentaurosTeam.View.Booking"
+
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Image Source="ms-appx:///Assets/FRanceVacancesLogo1.png" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" Stretch="Uniform"/>
+
+        <RelativePanel Grid.Row="1" HorizontalAlignment="Left">
+            <Border BorderBrush="White" BorderThickness="2" >
+                <Button Width="300" VerticalAlignment="Top"   Height="70"  Content="Back" Click="Button_ClickBack" Foreground="White" FontSize="40" />
+            </Border>
+        </RelativePanel>
+        <StackPanel Grid.Column="3" Grid.Row="1" HorizontalAlignment="Right">
+            <Border BorderBrush="White" BorderThickness="2" Width="300">
+                <Button  Grid.Row="1" Width="300" VerticalAlignment="Top"  Height="70" Content="Select" Click="Book_Now" Foreground="White" FontSize="40"/>
+            </Border>
+        </StackPanel>
+        <RelativePanel   Grid.Column="1" Grid.Row="1">
+       
+            <Image Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
+
+        </RelativePanel>
+
+
 
     </Grid>
 </Page>

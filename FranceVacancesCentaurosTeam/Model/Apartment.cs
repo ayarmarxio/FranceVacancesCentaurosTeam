@@ -15,7 +15,12 @@ namespace FranceVacancesCentaurosTeam.Model
         public string Location { get; set; }
         public string Description { get; set; }
         public string ID { get; set; }
-               
+
+        public void ApartmentSelector()
+        {
+
+        }
+
     }
 
     public class ApartmentManager
@@ -36,4 +41,6 @@ namespace FranceVacancesCentaurosTeam.Model
             return apartments;
         }
     }
+
+    
 }
