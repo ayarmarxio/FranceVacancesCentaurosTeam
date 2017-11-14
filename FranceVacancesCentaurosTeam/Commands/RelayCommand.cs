@@ -9,38 +9,60 @@ namespace FranceVacancesCentaurosTeam.Assets.Commands
 {
     class RelayCommand : ICommand
         {
-        
 
-        public event EventHandler CanExecuteChanged;
+        private readonly Action _execute;
+        private readonly Func<bool> _canExecute;
 
-              
-        private readonly Action<object> _targetExecuteMethod;
 
-               
-        private readonly Predicate<object> _targetCanExecuteMethod;
+
+        public RelayCommand(Action execute)
+            : this(execute, null)
+        {
+        }
+        public RelayCommand(Action execute, Func<bool> canExecute)
+        {
+            if (execute == null)
+                throw new ArgumentNullException("execute");
+            _execute = execute;
+            _canExecute = canExecute;
+        }
+
 
         public bool CanExecute(object parameter)
         {
-            return _targetCanExecuteMethod == null || _targetCanExecuteMethod(parameter);
+            return _canExecute == null ? true : _canExecute();
         }
+
 
         public void Execute(object parameter)
         {
-        
-            if (_targetExecuteMethod != null) _targetExecuteMethod(parameter);
+            _execute();
         }
 
-        public RelayCommand(Action<object> executeMethod, Predicate<object> canExecuteMethod = null)
+            public event EventHandler CanExecuteChanged;
+
+
+            public void RaiseCanExecuteChanged()
         {
-            _targetExecuteMethod = executeMethod;
-            _targetCanExecuteMethod = canExecuteMethod;
+            var handler = CanExecuteChanged;
+            if (handler != null)
+            {
+                handler(this, EventArgs.Empty);
+            }
         }
 
-        public void RaiseCanExecuteChanged()
-        {
-            if (CanExecuteChanged != null) CanExecuteChanged(this, EventArgs.Empty);
-        }
     }
+
+
+
+
+
+
+
+
 }
+ 
+
+
 
        
