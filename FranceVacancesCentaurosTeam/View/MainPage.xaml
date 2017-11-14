@@ -27,7 +27,7 @@
    
         <Image Source="ms-appx:///Assets/FRanceVacancesLogo1.png" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" Stretch="Uniform"/>
 
-        <GridView ItemsSource="{x:Bind Apartments}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center">
+        <GridView ItemsSource="{x:Bind Apartments}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="data:Apartment">
                     <Border BorderThickness="2" BorderBrush="White">
@@ -58,7 +58,7 @@
             <SplitView.Pane>
                 <StackPanel Width="300" HorizontalAlignment="Left" Margin="0,75,0,0" >
                     <Border BorderBrush="White" BorderThickness="2">
-                        <Button x:Name="Cannes" Content="Cannes" Foreground="White" FontSize="40"  FontFamily="Trebuchet MS" Height="70" Width="300"/>
+                        <Button x:Name="Cannes" Content="Cannes" Click="Button_Click" Foreground="White" FontSize="40"  FontFamily="Trebuchet MS" Height="70" Width="300"/>
                     </Border>
                     <Border BorderBrush="White" BorderThickness="2">    
                         <Button x:Name="Chamonix" Content="Chamonix" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300"/>
@@ -89,9 +89,9 @@
                     <Button x:Name="Cottage" Content="Cottage" Foreground="White" FontSize="40"  FontFamily="Trebuchet MS" Height="70" Width="300"/>
                     </Border>
                     <Border BorderBrush="White" BorderThickness="2">
-                     
 
-                        <Button x:Name="Flat" Content="Flat" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300"/>
+
+                        <Button  x:Name="Flat" Content="Flat" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300" Click="Button_Click2"/>
                     </Border>
                     <Border BorderBrush="White" BorderThickness="2">
                                 

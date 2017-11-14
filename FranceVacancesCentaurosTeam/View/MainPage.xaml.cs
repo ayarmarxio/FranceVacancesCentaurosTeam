@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using FranceVacancesCentaurosTeam.View;
 
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -38,11 +39,21 @@ namespace FranceVacancesCentaurosTeam
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+            Frame.Navigate(typeof(SelectPageAccommodation));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             MyApartmentSplitView.IsPaneOpen = !MyApartmentSplitView.IsPaneOpen;
+        }
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SelectPageCity));
+        }
+
+        private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
