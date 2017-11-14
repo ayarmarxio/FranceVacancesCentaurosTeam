@@ -8,5 +8,6 @@ namespace FranceVacancesCentaurosTeam.Assets.Commands
 {
     class RelayCommand
     {
+        
     }
 }
