@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,12 +20,6 @@ namespace FranceVacancesCentaurosTeam.Model
                
     }
 
-    public class Options
-    {
-        public string City { get; set; }
-        public string Acc { get; set; }
-    }
-
     public class ApartmentManager
     {
         public static List<Apartment> GetApartment()
@@ -41,18 +36,11 @@ namespace FranceVacancesCentaurosTeam.Model
             apartments.Add(new Apartment { ID = "8", Style = "Flat", Location = "Nice", Rent = "$750", MainImage = "ms-appx:///Assets/Apartment/nice2aMain.jpg" });
 
             return apartments;
+
         }
-        public static List<Options> GetAccommodation()
-        {
-            var accommodations = new List<Options>();
-
-            accommodations.Add(new Options() { City = "Cannes", Acc = "Cottage" });
-            accommodations.Add(new Options() { City = "Chamonix", Acc = "Flat" });
-            accommodations.Add(new Options() { City = "Lyon", Acc = "Villa" });
-            accommodations.Add(new Options() { City = "Nice", Acc = "Bungalow" });
 
 
-            return accommodations;
-        }
+        
+        
     }
 }

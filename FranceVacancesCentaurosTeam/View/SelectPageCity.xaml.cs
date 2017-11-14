@@ -35,5 +35,36 @@ namespace FranceVacancesCentaurosTeam.View
         {
 
         }
+        string selectitem = null;
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e.Parameter != null)
+            {
+                string getdata = e.Parameter.ToString();
+                selectitem = getdata;
+            }
+
+            if (selectitem.Equals("Cannes"))
+            {
+                pivotcontrol.SelectedIndex = 1;
+            }
+            else if (selectitem.Equals("Chamonix"))
+            {
+                pivotcontrol.SelectedIndex = 2;
+            }
+            else if (selectitem.Equals("Lyon"))
+            {
+                pivotcontrol.SelectedIndex = 3;
+            }
+            else if (selectitem.Equals("Nice"))
+            {
+                pivotcontrol.SelectedIndex = 4;
+            }
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
     }
 }

@@ -25,9 +25,28 @@
         <Grid.Background>
             <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill" />
         </Grid.Background>
-       
-        <Pivot Grid.Column="1" Margin="0,0,0,0" Grid.Row="1">
-        <PivotItem Header="Cottage">
+
+        <Pivot Grid.Column="1" Margin="0,0,0,0" Grid.Row="1" x:Name="pivotcontrol">
+            <PivotItem Header="All">
+                <GridView ItemsSource="{x:Bind Apartments}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:DataType="data:Apartment">
+                            <Border BorderThickness="2" BorderBrush="White">
+                                <StackPanel>
+                                    <Image  Source="{x:Bind MainImage}" Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
+                                    <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Location}"/>
+                                    <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Style}"/>
+                                    <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Rent}"/>
+                                    <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
+                                        <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
+                                    </Border>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </PivotItem>
+            <PivotItem Header="Cannes">
             <GridView ItemsSource="{x:Bind Apartments}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="data:Apartment">
@@ -46,7 +65,7 @@
                 </GridView.ItemTemplate>
             </GridView>
         </PivotItem>
-        <PivotItem Header="Flat">
+        <PivotItem Header="Chamonix">
             <GridView ItemsSource="{x:Bind Apartments}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="data:Apartment">
@@ -65,7 +84,7 @@
                 </GridView.ItemTemplate>
             </GridView>
         </PivotItem>
-        <PivotItem Header="Villa">
+        <PivotItem Header="Lyon">
             <GridView ItemsSource="{x:Bind Apartments}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="data:Apartment">
@@ -84,7 +103,7 @@
                 </GridView.ItemTemplate>
             </GridView>
         </PivotItem>
-        <PivotItem Header="Bungalow">
+        <PivotItem Header="Nice">
             <GridView ItemsSource="{x:Bind Apartments}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
                 <GridView.ItemTemplate>
                     <DataTemplate x:DataType="data:Apartment">
@@ -104,5 +123,6 @@
             </GridView>
         </PivotItem>
             </Pivot>
+        <Button Content="Back" HorizontalAlignment="Right" Height="auto" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="auto" Click="Button_Click"/>
     </Grid>
 </Page>
