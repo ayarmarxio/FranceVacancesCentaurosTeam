@@ -104,6 +104,12 @@
     <Compile Include="View\Booking.xaml.cs">
       <DependentUpon>Booking.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\CustomerPage.xaml.cs">
+      <DependentUpon>CustomerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HostPage.xaml.cs">
+      <DependentUpon>HostPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Invoice.xaml.cs">
       <DependentUpon>Invoice.xaml</DependentUpon>
     </Compile>
@@ -168,6 +174,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="View\Booking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustomerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HostPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
