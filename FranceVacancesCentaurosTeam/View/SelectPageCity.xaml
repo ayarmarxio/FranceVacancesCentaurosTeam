@@ -10,7 +10,7 @@
     
 
     <Grid>
-        <Grid.ColumnDefinitions>
+        <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="34*"/>
             <ColumnDefinition Width="10*"/>
@@ -103,6 +103,6 @@
                 </GridView.ItemTemplate>
             </GridView>
         </PivotItem>
-            </Pivot>
+            </Pivot>-->
     </Grid>
 </Page>

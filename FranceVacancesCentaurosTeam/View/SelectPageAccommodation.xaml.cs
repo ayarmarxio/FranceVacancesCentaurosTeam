@@ -26,29 +26,29 @@ namespace FranceVacancesCentaurosTeam.View
     /// </summary>
     public sealed partial class SelectPageAccommodation : Page
     {
-        private List<Apartment> Apartments;
-        private List<Options> accommodation;
+        //private List<Accommodation> Accommodations;
+        //private List<Options> accommodation;
 
 
-        public SelectPageAccommodation()
-        {
-            //accommodation = ApartmentManager.GetAccommodation();
-            Apartments = ApartmentManager.GetApartment();
-            this.InitializeComponent();
-            //this.InitializeComponent();
+        //public SelectPageAccommodation()
+        //{
+        //    //accommodation = ApartmentManager.GetAccommodation();
+        //    Apartments = ApartmentManager.GetApartment();
+        //    this.InitializeComponent();
+        //    //this.InitializeComponent();
             
 
-        }
+        //}
        
 
-        private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        //private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
 
-        }
-        private void Pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        //}
+        //private void Pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
 
-        }
+       // }
 
     }
 }

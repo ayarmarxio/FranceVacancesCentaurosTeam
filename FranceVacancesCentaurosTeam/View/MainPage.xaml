@@ -5,10 +5,13 @@
     xmlns:local="using:FranceVacancesCentaurosTeam"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:data="using:FranceVacancesCentaurosTeam.Model"
+    xmlns:viewModel="using:FranceVacancesCentaurosTeam.ViewModel"
     mc:Ignorable="d">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill" />
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15*"/>
             <ColumnDefinition Width="34*"/>
@@ -20,22 +23,24 @@
             <RowDefinition Height="30*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        
-        <Grid.Background>
-            <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill" />
-        </Grid.Background>
-   
+        <Grid.DataContext>
+            <viewModel:AccommodationCollectionVM/>
+        </Grid.DataContext>
         <Image Source="ms-appx:///Assets/FRanceVacancesLogo1.png" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" Stretch="Uniform"/>
-
-        <GridView ItemsSource="{x:Bind Apartments}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
+        
+        <GridView ItemsSource="{Binding Accommodation}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
             <GridView.ItemTemplate>
-                <DataTemplate x:DataType="data:Apartment">
+                <DataTemplate>
                     <Border BorderThickness="2" BorderBrush="White">
                         <StackPanel>
-                        <Image  Source="{x:Bind MainImage}" Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
-                            <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Location}"/>
-                            <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Style}"/>
-                            <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Rent}"/>
+                        <Image  Source="{Binding MainImage}" Height="170" Width="300" 
+                                Stretch="UniformToFill" HorizontalAlignment="Center" />
+                            <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" 
+                                       Text="{Binding Location}"/>
+                            <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" 
+                                       Text="{Binding Style}"/>
+                            <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" 
+                                       Text="{Binding Rent}"/>
                             <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
                                 <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
                             </Border>
@@ -89,16 +94,13 @@
                     <Button x:Name="Cottage" Content="Cottage" Foreground="White" FontSize="40"  FontFamily="Trebuchet MS" Height="70" Width="300"/>
                     </Border>
                     <Border BorderBrush="White" BorderThickness="2">
-
-
                         <Button  x:Name="Flat" Content="Flat" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300" Click="Button_Click2"/>
                     </Border>
                     <Border BorderBrush="White" BorderThickness="2">
-                                
-                                <Button x:Name="Villa" Content="Villa" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300"/>
+                         <Button x:Name="Villa" Content="Villa" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300"/>
                     </Border>
                     <Border BorderBrush="White" BorderThickness="2">
-                                    <Button x:Name="Bungalow" Content="Bungalow" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300"/>
+                          <Button x:Name="Bungalow" Content="Bungalow" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300"/>
                     </Border>
                 </StackPanel>
             </SplitView.Pane>

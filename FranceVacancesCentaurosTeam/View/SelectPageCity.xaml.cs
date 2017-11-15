@@ -24,16 +24,16 @@ namespace FranceVacancesCentaurosTeam.View
     /// </summary>
     public sealed partial class SelectPageCity : Page
     {
-        private List<Apartment> Apartments;
-        public SelectPageCity()
-        {
-            Apartments = ApartmentManager.GetApartment();
-            this.InitializeComponent();
-        }
+        //private List<Accommodation> Apartments;
+        //public SelectPageCity()
+        //{
+        //    Apartments = ApartmentManager.GetApartment();
+        //    this.InitializeComponent();
+        //}
 
-        private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        //private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
 
-        }
+        //}
     }
 }
