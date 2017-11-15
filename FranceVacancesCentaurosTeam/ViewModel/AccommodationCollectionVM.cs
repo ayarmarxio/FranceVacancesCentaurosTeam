@@ -13,6 +13,8 @@ namespace FranceVacancesCentaurosTeam.ViewModel
     class AccommodationCollectionVM
     {
         private Accommodation _selectedItem;
+        private ObservableCollection<Accommodation> _filteredCottage;
+        public ObservableCollection<Accommodation> Accommodation { get; set; }
 
         public Accommodation SelectedItem
         {
@@ -23,7 +25,14 @@ namespace FranceVacancesCentaurosTeam.ViewModel
             }
         }
 
-        public ObservableCollection<Accommodation> Accommodation { get; set; }
+        
+
+        public ObservableCollection<Accommodation> FilteredCottage { get { return _filteredCottage; } set { _filteredCottage = value; } }
+        
+        //public AccommodationCollectionVM()
+        //{
+        //    FilteredCottage = ;
+        //}
 
         public AccommodationCollectionVM()
         {
@@ -40,7 +49,22 @@ namespace FranceVacancesCentaurosTeam.ViewModel
             };
 
             SelectedItem = new Accommodation();
-        }                     
+        }                
+        
+        public void FilterCottage()
+        {
+           
+            foreach (Accommodation Cottage in Accommodation)
+            {
+                string filteredCottage;
+
+                if (Cottage.Style == "Cottage")
+                {
+                    filteredCottage = Cottage.MainImage + Cottage.Location + Cottage.Rent;
+                }
+            }
+        }
+        
     }
 }
 

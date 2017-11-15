@@ -5,7 +5,7 @@
     xmlns:local="using:FranceVacancesCentaurosTeam.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:data="using:FranceVacancesCentaurosTeam.Model"
+    xmlns:viewModel="using:FranceVacancesCentaurosTeam.ViewModel"
     mc:Ignorable="d">
     
 
@@ -21,24 +21,47 @@
             <RowDefinition Height="30*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-
+       
         <Grid.Background>
             <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill" />
         </Grid.Background>
-       
+        <Grid.DataContext>
+            <viewModel:AccommodationCollectionVM/>
+        </Grid.DataContext>
         <Pivot Grid.Column="1" Margin="0,0,0,0" Grid.Row="1">
-        <PivotItem Header="Cottage">
-            <GridView ItemsSource="{}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
+        
+            <PivotItem Header="Cottage">
+            <GridView ItemsSource= "{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                            <Border BorderThickness="2" BorderBrush="White">
+                                <StackPanel>
+                                    <Image  Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" Source="{Binding MainImage}" />
+                                    <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Location}" />
+                                    <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Style}"/>
+                                    <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{Binding Rent}" />
+                                        <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
+                                        <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
+                                  </Border>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+          </PivotItem>
+            
+        <PivotItem Header="Flat">
+            <GridView HorizontalAlignment="Center">
                 <GridView.ItemTemplate>
                     <DataTemplate>
                         <Border BorderThickness="2" BorderBrush="White">
                             <StackPanel>
-                                <Image  Source="{x:Bind MainImage}" Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
-                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Location}"/>
-                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Style}"/>
-                                <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Rent}"/>
+                                <Image Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
+                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" />
+                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center"/>
+                                <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" />
                                 <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
-                                    <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
+                                <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
                                 </Border>
                             </StackPanel>
                         </Border>
@@ -46,35 +69,17 @@
                 </GridView.ItemTemplate>
             </GridView>
         </PivotItem>
-        <PivotItem Header="Flat">
-            <GridView ItemsSource="{x:Bind Apartments}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
-                <GridView.ItemTemplate>
-                    <DataTemplate x:DataType="data:Apartment">
-                        <Border BorderThickness="2" BorderBrush="White">
-                            <StackPanel>
-                                <Image  Source="{x:Bind MainImage}" Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
-                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Location}"/>
-                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Style}"/>
-                                <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Rent}"/>
-                                <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
-                                    <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
-                                </Border>
-                            </StackPanel>
-                        </Border>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-            </GridView>
-        </PivotItem>
+        
         <PivotItem Header="Villa">
-            <GridView ItemsSource="{x:Bind Apartments}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
+            <GridView  HorizontalAlignment="Center">
                 <GridView.ItemTemplate>
-                    <DataTemplate x:DataType="data:Apartment">
+                    <DataTemplate>
                         <Border BorderThickness="2" BorderBrush="White">
                             <StackPanel>
-                                <Image  Source="{x:Bind MainImage}" Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
-                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Location}"/>
-                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Style}"/>
-                                <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Rent}"/>
+                                <Image Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
+                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center"/>
+                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" />
+                                <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" />
                                 <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
                                     <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
                                 </Border>
@@ -84,16 +89,17 @@
                 </GridView.ItemTemplate>
             </GridView>
         </PivotItem>
+        
         <PivotItem Header="Bungalow">
-            <GridView ItemsSource="{x:Bind Apartments}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
+            <GridView HorizontalAlignment="Center">
                 <GridView.ItemTemplate>
-                    <DataTemplate x:DataType="data:Apartment">
+                    <DataTemplate>
                         <Border BorderThickness="2" BorderBrush="White">
                             <StackPanel>
-                                <Image  Source="{x:Bind MainImage}" Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
-                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Location}"/>
-                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Style}"/>
-                                <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Rent}"/>
+                                <Image Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
+                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center"/>
+                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" />
+                                <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" />
                                 <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
                                     <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
                                 </Border>
@@ -103,6 +109,6 @@
                 </GridView.ItemTemplate>
             </GridView>
         </PivotItem>
-            </Pivot>
+      </Pivot>
     </Grid>
 </Page>

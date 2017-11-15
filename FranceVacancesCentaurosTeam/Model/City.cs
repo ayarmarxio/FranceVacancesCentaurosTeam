@@ -8,5 +8,6 @@ namespace FranceVacancesCentaurosTeam.Model
 {
     class City
     {
+        
     }
 }

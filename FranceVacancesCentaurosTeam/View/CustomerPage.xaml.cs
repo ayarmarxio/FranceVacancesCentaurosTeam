@@ -22,68 +22,67 @@ namespace FranceVacancesCentaurosTeam.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class CustomerPage : Page
-    {
-        //private List<apartments> ApartmentList;
+    //public sealed partial class CustomerPage : Page
+    //{
+    //    //private List<apartments> ApartmentList;
 
       
 
-        public CustomerPage()
-        {
-            this.InitializeComponent();
-            Apartments = ApartmentManager.GetApartment();
-        }
+    //    public CustomerPage()
+    //    {
+    //        this.InitializeComponent();
+    //    }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
-        }
+    //    private void Button_Click(object sender, RoutedEventArgs e)
+    //    {
+    //        MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+    //    }
 
-        private void Button_Click1(object sender, RoutedEventArgs e)
-        {
-            MyApartmentSplitView.IsPaneOpen = !MyApartmentSplitView.IsPaneOpen;
-        }
-        private void Button_Click2(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(SelectPageCity), "Cannes");
-        }
-        private void Button_Click3(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(SelectPageCity), "Chamonix");
-        }
-        private void Button_Click4(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SelectPageCity), "Lyon");
-        }
-        private void Button_Click5(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SelectPageCity), "Nice");
-        }
-        private void Button_Click6(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SelectPageAccommodation), "Cottage");
-        }
-        private void Button_Click7(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SelectPageAccommodation), "Flat");
-        }
-        private void Button_Click8(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SelectPageAccommodation), "Villa");
-        }
-        private void Button_Click9(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SelectPageAccommodation), "Bungalow");
-        }
-        private void Button_Click10(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MainPage));
-        }
+    //    private void Button_Click1(object sender, RoutedEventArgs e)
+    //    {
+    //        MyApartmentSplitView.IsPaneOpen = !MyApartmentSplitView.IsPaneOpen;
+    //    }
+    //    private void Button_Click2(object sender, RoutedEventArgs e)
+    //    {
+    //        this.Frame.Navigate(typeof(SelectPageCity), "Cannes");
+    //    }
+    //    private void Button_Click3(object sender, RoutedEventArgs e)
+    //    {
+    //        this.Frame.Navigate(typeof(SelectPageCity), "Chamonix");
+    //    }
+    //    private void Button_Click4(object sender, RoutedEventArgs e)
+    //    {
+    //        Frame.Navigate(typeof(SelectPageCity), "Lyon");
+    //    }
+    //    private void Button_Click5(object sender, RoutedEventArgs e)
+    //    {
+    //        Frame.Navigate(typeof(SelectPageCity), "Nice");
+    //    }
+    //    private void Button_Click6(object sender, RoutedEventArgs e)
+    //    {
+    //        Frame.Navigate(typeof(SelectPageAccommodation), "Cottage");
+    //    }
+    //    private void Button_Click7(object sender, RoutedEventArgs e)
+    //    {
+    //        Frame.Navigate(typeof(SelectPageAccommodation), "Flat");
+    //    }
+    //    private void Button_Click8(object sender, RoutedEventArgs e)
+    //    {
+    //        Frame.Navigate(typeof(SelectPageAccommodation), "Villa");
+    //    }
+    //    private void Button_Click9(object sender, RoutedEventArgs e)
+    //    {
+    //        Frame.Navigate(typeof(SelectPageAccommodation), "Bungalow");
+    //    }
+    //    private void Button_Click10(object sender, RoutedEventArgs e)
+    //    {
+    //        this.Frame.Navigate(typeof(MainPage));
+    //    }
 
-        private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+    //    private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    //    {
 
-        }
-    }
+    //    }
+    //}
 }

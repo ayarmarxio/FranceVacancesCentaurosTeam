@@ -8,7 +8,7 @@
     xmlns:data="using:FranceVacancesCentaurosTeam.Model"
     mc:Ignorable="d">
 
-    <Grid>
+    <!--<Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15*"/>
             <ColumnDefinition Width="34*"/>
@@ -104,5 +104,5 @@
             </SplitView.Pane>
         </SplitView>
         <Button Content="Back" HorizontalAlignment="Right" Height="auto" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="auto" Click="Button_Click10"/>
-    </Grid>
+    </Grid>-->
 </Page>
