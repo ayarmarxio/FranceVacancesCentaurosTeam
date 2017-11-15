@@ -26,7 +26,7 @@ namespace FranceVacancesCentaurosTeam.View
     {
         //private List<apartments> ApartmentList;
 
-        private List<Apartment> Apartments;
+      
 
         public CustomerPage()
         {

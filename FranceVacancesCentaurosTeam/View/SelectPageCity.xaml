@@ -10,7 +10,7 @@
     
 
     <Grid>
-        <!--<Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="34*"/>
             <ColumnDefinition Width="10*"/>
@@ -28,9 +28,9 @@
        
         <Pivot Grid.Column="1" Margin="0,0,0,0" Grid.Row="1">
         <PivotItem Header="Cottage">
-            <GridView ItemsSource="{x:Bind Apartments}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
+            <GridView ItemsSource="{}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
                 <GridView.ItemTemplate>
-                    <DataTemplate x:DataType="data:Apartment">
+                    <DataTemplate>
                         <Border BorderThickness="2" BorderBrush="White">
                             <StackPanel>
                                 <Image  Source="{x:Bind MainImage}" Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
@@ -103,6 +103,6 @@
                 </GridView.ItemTemplate>
             </GridView>
         </PivotItem>
-            </Pivot>-->
+            </Pivot>
     </Grid>
 </Page>
