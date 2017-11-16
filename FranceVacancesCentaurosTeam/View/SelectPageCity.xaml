@@ -47,7 +47,7 @@
                     </GridView.ItemTemplate>
                 </GridView>
             </PivotItem>
-            <PivotItem Header="Cannes">
+            <PivotItem Header="Cannes" >
             <GridView ItemsSource= "{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
                 <GridView.ItemTemplate>
                     <DataTemplate>
