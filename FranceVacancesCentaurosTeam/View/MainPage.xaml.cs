@@ -38,7 +38,7 @@ namespace FranceVacancesCentaurosTeam
             //Frame.Navigate(typeof(SelectPageAccommodation));
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click1(object sender, RoutedEventArgs e)
         {
             MyApartmentSplitView.IsPaneOpen = !MyApartmentSplitView.IsPaneOpen;
         }
