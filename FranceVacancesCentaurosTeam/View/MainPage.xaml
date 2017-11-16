@@ -30,9 +30,9 @@
         <GridView ItemsSource="{x:Bind Apartments}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="data:Apartment">
-                    <Border BorderThickness="2" BorderBrush="White">
+                     <Border BorderThickness="2" BorderBrush="White">
                         <StackPanel>
-                        <Image  Source="{x:Bind MainImage}" Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
+                            <Image   Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" Source="{x:Bind MainImage}" />
                             <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Location}"/>
                             <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Style}"/>
                             <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Rent}"/>
