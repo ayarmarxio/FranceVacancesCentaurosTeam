@@ -128,5 +128,6 @@
                 </GridView>
             </PivotItem>
         </Pivot>
+        <Button Content="Back" HorizontalAlignment="Right" Height="auto" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="auto" Click="Button_Click"/>
     </Grid>
 </Page>
