@@ -45,6 +45,11 @@ namespace FranceVacancesCentaurosTeam.View
         {
 
         }
+        public SelectPageAccommodation()
+        {
+            
+            this.InitializeComponent();
+        }
         //private void Pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
         //{
 
