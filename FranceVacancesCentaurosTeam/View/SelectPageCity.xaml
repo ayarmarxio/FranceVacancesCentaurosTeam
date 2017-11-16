@@ -30,7 +30,7 @@
         </Grid.DataContext>
         <Pivot Grid.Column="1" Margin="0,0,0,0" Grid.Row="1">
         
-            <PivotItem Header="Cottage">
+            <PivotItem Header="Cannes">
             <GridView ItemsSource= "{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
                 <GridView.ItemTemplate>
                     <DataTemplate>
@@ -50,7 +50,7 @@
                 </GridView>
           </PivotItem>
             
-        <PivotItem Header="Flat">
+        <PivotItem Header="Chamonix">
             <GridView HorizontalAlignment="Center">
                 <GridView.ItemTemplate>
                     <DataTemplate>
@@ -70,7 +70,7 @@
             </GridView>
         </PivotItem>
         
-        <PivotItem Header="Villa">
+        <PivotItem Header="Lyon">
             <GridView  HorizontalAlignment="Center">
                 <GridView.ItemTemplate>
                     <DataTemplate>
@@ -90,7 +90,7 @@
             </GridView>
         </PivotItem>
         
-        <PivotItem Header="Bungalow">
+        <PivotItem Header="Nice">
             <GridView HorizontalAlignment="Center">
                 <GridView.ItemTemplate>
                     <DataTemplate>
