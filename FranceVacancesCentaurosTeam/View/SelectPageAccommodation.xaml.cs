@@ -41,10 +41,10 @@ namespace FranceVacancesCentaurosTeam.View
         //}
 
 
-        //private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
+        private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
-        //}
+        }
         //private void Pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
         //{
 

@@ -20,7 +20,7 @@
             <RowDefinition Height="30*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-
+        
         <Grid.Background>
             <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill" />
         </Grid.Background>
@@ -28,6 +28,7 @@
             <viewModel:AccommodationCollectionVM/>
         </Grid.DataContext>
         <Pivot Grid.Column="1" Margin="0,0,0,0" Grid.Row="1" x:Name="pivotcontrol">
+         
             <PivotItem Header="All">
                 <GridView ItemsSource="{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
                     <GridView.ItemTemplate>

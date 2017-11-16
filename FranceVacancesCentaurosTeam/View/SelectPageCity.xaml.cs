@@ -31,8 +31,10 @@ namespace FranceVacancesCentaurosTeam.View
         //    this.InitializeComponent();
         //}
 
-        //private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
+        private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+        }
+
         string selectitem = null;
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
