@@ -95,16 +95,34 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Commands\RelayCommands.cs" />
     <Compile Include="Model\Apartment.cs" />
     <Compile Include="Model\City.cs" />
     <Compile Include="Model\Owner.cs" />
     <Compile Include="ViewModel\ApartmentVM.cs" />
     <Compile Include="ViewModel\CityVM.cs" />
+    <Compile Include="View\Booking.xaml.cs">
+      <DependentUpon>Booking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustomerPage.xaml.cs">
+      <DependentUpon>CustomerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HostPage.xaml.cs">
+      <DependentUpon>HostPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Invoice.xaml.cs">
+      <DependentUpon>Invoice.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\SelectPageCity.xaml.cs">
+      <DependentUpon>SelectPageCity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SelectPageAccommodation.xaml.cs">
+      <DependentUpon>SelectPageAccommodation.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -113,6 +131,34 @@
     <None Include="FranceVacancesCentaurosTeam_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Apartment\canes2c.jpg" />
+    <Content Include="Assets\Apartment\cannes1aMain.jpg" />
+    <Content Include="Assets\Apartment\cannes1b.jpg" />
+    <Content Include="Assets\Apartment\cannes1c.jpg" />
+    <Content Include="Assets\Apartment\cannes2aMain.jpg" />
+    <Content Include="Assets\Apartment\cannes2d.jpg" />
+    <Content Include="Assets\Apartment\chamonix1aMain.jpg" />
+    <Content Include="Assets\Apartment\chamonix1c.jpg" />
+    <Content Include="Assets\Apartment\chamonix1d.jpg" />
+    <Content Include="Assets\Apartment\chamonix2aMain.jpg" />
+    <Content Include="Assets\Apartment\chamonix2b.jpg" />
+    <Content Include="Assets\Apartment\chamonix2c.jpg" />
+    <Content Include="Assets\Apartment\lyon1aMain.jpg" />
+    <Content Include="Assets\Apartment\lyon1b.jpg" />
+    <Content Include="Assets\Apartment\lyon1c.jpg" />
+    <Content Include="Assets\Apartment\lyon2a.jpg" />
+    <Content Include="Assets\Apartment\lyon2b.jpg" />
+    <Content Include="Assets\Apartment\lyon2c.jpg" />
+    <Content Include="Assets\Apartment\nice1c.jpg" />
+    <Content Include="Assets\Apartment\nice1d.jpg" />
+    <Content Include="Assets\Apartment\nice1Main.jpg" />
+    <Content Include="Assets\Apartment\nice2aMain.jpg" />
+    <Content Include="Assets\Apartment\nice2e.jpg" />
+    <Content Include="Assets\Apartment\nice2vb.jpg" />
+    <Content Include="Assets\blue-wood-texture-background 2.jpg" />
+    <Content Include="Assets\FRanceVacancesLogo1.png" />
+    <Content Include="Assets\FranceVacancesPortrait.jpg" />
+    <Content Include="Assets\Turquoise Wall.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -127,9 +173,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\Booking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustomerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HostPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Invoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SelectPageCity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SelectPageAccommodation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -138,7 +208,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\Apartment\" />
     <Folder Include="Assets\City\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
