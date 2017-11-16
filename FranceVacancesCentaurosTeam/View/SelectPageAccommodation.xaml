@@ -29,8 +29,8 @@
         </Grid.DataContext>
         <Pivot Grid.Column="1" Margin="0,0,0,0" Grid.Row="1">
 
-            <PivotItem Header="Cottage">
-                <GridView ItemsSource= "{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
+            <PivotItem Header="Cottage" x:Name="pivotcontrol">
+                <GridView ItemsSource= "{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" >
                     <GridView.ItemTemplate>
                         <DataTemplate>
                             <Border BorderThickness="2" BorderBrush="White">
@@ -49,7 +49,7 @@
                 </GridView>
             </PivotItem>
 
-            <PivotItem Header="Flat">
+            <PivotItem Header="Flat"  x:Name="pivotcontrol">
                 <GridView HorizontalAlignment="Center">
                     <GridView.ItemTemplate>
                         <DataTemplate>
@@ -69,7 +69,7 @@
                 </GridView>
             </PivotItem>
 
-            <PivotItem Header="Villa">
+            <PivotItem Header="Villa"  x:Name="pivotcontrol">
                 <GridView  HorizontalAlignment="Center">
                     <GridView.ItemTemplate>
                         <DataTemplate>
@@ -89,7 +89,7 @@
                 </GridView>
             </PivotItem>
 
-            <PivotItem Header="Bungalow">
+            <PivotItem Header="Bungalow"  x:Name="pivotcontrol">
                 <GridView HorizontalAlignment="Center">
                     <GridView.ItemTemplate>
                         <DataTemplate>
