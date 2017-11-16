@@ -27,7 +27,7 @@
         <Grid.DataContext>
             <viewModel:AccommodationCollectionVM/>
         </Grid.DataContext>
-        <Pivot Grid.Column="1" Margin="0,0,0,0" Grid.Row="1" x:Name="pivotcontrol">
+        <Pivot Grid.Column="1" Grid.Row="1" x:Name="pivotcontrol">
          
             <PivotItem Header="All"> 
                 <GridView ItemsSource="{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
