@@ -43,7 +43,8 @@ namespace FranceVacancesCentaurosTeam
         }
         private void Button_Click11(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(HostPage));
+            Frame.Navigate(typeof(
+                HostPage));
         }
 
         private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
