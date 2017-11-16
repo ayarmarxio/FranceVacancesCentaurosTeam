@@ -36,10 +36,10 @@ namespace FranceVacancesCentaurosTeam.View
         //    Apartments = ApartmentManager.GetApartment();
         //    this.InitializeComponent();
         //    //this.InitializeComponent();
-            
+
 
         //}
-       
+
 
         //private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         //{
@@ -48,7 +48,34 @@ namespace FranceVacancesCentaurosTeam.View
         //private void Pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
         //{
 
-       // }
+        // }
+        string selectitem = null;
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e.Parameter != null)
+            {
+                string getdata = e.Parameter.ToString();
+                selectitem = getdata;
+            }
+
+            if (selectitem.Equals("Cottage"))
+            {
+                pivotcontrol.SelectedIndex = 1;
+            }
+            else if (selectitem.Equals("Flat"))
+            {
+                pivotcontrol.SelectedIndex = 2;
+            }
+            else if (selectitem.Equals("Villa"))
+            {
+                pivotcontrol.SelectedIndex = 3;
+            }
+            else if (selectitem.Equals("Bungalow"))
+            {
+                pivotcontrol.SelectedIndex = 4;
+            }
+
+        }
     }
 }
