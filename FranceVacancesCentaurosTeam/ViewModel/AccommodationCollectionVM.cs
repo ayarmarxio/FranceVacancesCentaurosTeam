@@ -13,8 +13,12 @@ namespace FranceVacancesCentaurosTeam.ViewModel
     class AccommodationCollectionVM
     {
         private Accommodation _selectedItem;
-        private ObservableCollection<Accommodation> _filteredCottage;
+                
         public ObservableCollection<Accommodation> Accommodation { get; set; }
+        public ObservableCollection<Accommodation> filteredCottages { get; set; }
+        //public ObservableCollection<Accommodation> filteredFlat { get; set; }
+        //public ObservableCollection<Accommodation> filteredBungalow { get; set; }
+        //public ObservableCollection<Accommodation> filteredVilla { get; set; }
 
         public Accommodation SelectedItem
         {
@@ -24,15 +28,7 @@ namespace FranceVacancesCentaurosTeam.ViewModel
                 _selectedItem = value;
             }
         }
-
         
-
-        public ObservableCollection<Accommodation> FilteredCottage { get { return _filteredCottage; } set { _filteredCottage = value; } }
-        
-        //public AccommodationCollectionVM()
-        //{
-        //    FilteredCottage = ;
-        //}
 
         public AccommodationCollectionVM()
         {
@@ -49,22 +45,65 @@ namespace FranceVacancesCentaurosTeam.ViewModel
             };
 
             SelectedItem = new Accommodation();
-        }                
-        
-        public void FilterCottage()
+
+                    
+            filteredCottages = new ObservableCollection<Accommodation>();
+            FilterCottage();
+
+            //filteredFlat = new ObservableCollection<Accommodation>();
+            //FilterFlat();
+
+            //filteredVilla = new ObservableCollection<Accommodation>();
+            //FilterVilla();
+
+            //filteredBungalow = new ObservableCollection<Accommodation>();
+            //FilterBungalow();
+        }
+
+
+        public  void FilterCottage()
         {
-           
             foreach (Accommodation Cottage in Accommodation)
             {
-                string filteredCottage;
-
                 if (Cottage.Style == "Cottage")
                 {
-                    filteredCottage = Cottage.MainImage + Cottage.Location + Cottage.Rent;
+                   filteredCottages.Add(Cottage);
                 }
             }
         }
-        
+
+        //public void FilterFlat()
+        //{
+        //    foreach (Accommodation Flat in Accommodation)
+        //    {
+        //        if (Flat.Style == "Flat")
+        //        {
+        //            filteredCottages.Add(Flat);
+        //        }
+        //    }
+        //}
+
+        //public void FilterVilla()
+        //{
+        //    foreach (Accommodation Villa in Accommodation)
+        //    {
+        //        if (Villa.Style == "Villa")
+        //        {
+        //            filteredVilla.Add(Villa);
+        //        }
+        //    }
+        //}
+
+        //public void FilterBungalow()
+        //{
+        //    foreach (Accommodation Bungalow in Accommodation)
+        //    {
+        //        if (Bungalow.Style == "Bungalow")
+        //        {
+        //            filteredBungalow.Add(Bungalow);
+        //        }
+        //    }
+        //}
     }
 }
 

@@ -30,18 +30,17 @@
         </Grid.DataContext>
         <Pivot Grid.Column="1" Margin="0,0,0,0" Grid.Row="1" x:Name="pivotcontrol">
             <PivotItem Header="All">
-                <GridView ItemsSource="{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
+                <GridView ItemsSource="{Binding filteredCottages}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
                     <GridView.ItemTemplate>
-                        <DataTemplate >
+                        <DataTemplate>
                             <Border BorderThickness="2" BorderBrush="White">
                                 <StackPanel>
-                                    <Image  Source="{Binding MainImage}" Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
-                                    <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Location}"/>
-                                    <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Style}"/>
-                                    <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{Binding Rent}"/>
-                                    <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
-                                        <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
-                                    </Border>
+                                        <Image   Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" Source="{Binding MainImage}" />
+                                        <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Style}"/>
+                                        <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{Binding Rent}"/>
+                                        <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
+                                            <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
+                                        </Border>
                                 </StackPanel>
                             </Border>
                         </DataTemplate>

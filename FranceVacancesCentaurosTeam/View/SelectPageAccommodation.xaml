@@ -50,7 +50,7 @@
                 </GridView>
             </PivotItem>
             <PivotItem Header="Cottage" >
-                <GridView ItemsSource= "{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" >
+                <GridView ItemsSource= "{Binding filteredCottages}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" >
                     <GridView.ItemTemplate>
                         <DataTemplate>
                             <Border BorderThickness="2" BorderBrush="White">
@@ -70,7 +70,7 @@
             </PivotItem>
 
             <PivotItem Header="Flat">
-                <GridView ItemsSource="{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
+                <GridView ItemsSource="{Binding filteredFlat}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
                     <GridView.ItemTemplate>
                         <DataTemplate>
                             <Border BorderThickness="2" BorderBrush="White">
@@ -90,7 +90,7 @@
             </PivotItem>
 
             <PivotItem Header="Villa">
-                <GridView ItemsSource="{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
+                <GridView ItemsSource="{Binding filteredVilla}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
                     <GridView.ItemTemplate>
                         <DataTemplate>
                             <Border BorderThickness="2" BorderBrush="White">
@@ -110,7 +110,7 @@
             </PivotItem>
 
             <PivotItem Header="Bungalow">
-                <GridView ItemsSource="{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
+                <GridView ItemsSource="{Binding filteredBungalows}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
                     <GridView.ItemTemplate>
                         <DataTemplate>
                             <Border BorderThickness="2" BorderBrush="White">
