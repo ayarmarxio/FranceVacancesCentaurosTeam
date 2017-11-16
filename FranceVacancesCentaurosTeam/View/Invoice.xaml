@@ -7,7 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#FF26D6C0">
+        <TextBox HorizontalAlignment="Left" Margin="338,182,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;&#xD;&#xA;Your booking is confirmed.&#xD;&#xA;Thank you for choosing us for your next dream holiday! &#xD;&#xA;Enjoy your stay and please contact us for any further information &#xD;&#xA;or question at :&#xD;&#xA;tlf: +33 267 894 &#xD;&#xA;or &#xD;&#xA;          e-mail: france.vacancies@vacancies.fr                  " VerticalAlignment="Top" Height="361" Width="641" BorderBrush="#662358ED" FontSize="24" FontFamily="Pristina" FontWeight="Bold" TextAlignment="Center" Foreground="#FF64577D" SelectionHighlightColor="#FF256699" SelectionHighlightColorWhenNotFocused="#FF6BA9D4" Background="#FF96DBE2"/>
+
 
     </Grid>
 </Page>

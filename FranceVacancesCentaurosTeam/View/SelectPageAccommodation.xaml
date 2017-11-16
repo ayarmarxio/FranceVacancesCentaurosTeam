@@ -29,7 +29,7 @@
         </Grid.DataContext>
         <Pivot Grid.Column="1" Margin="0,0,0,0" Grid.Row="1" x:Name="pivotcontrol">
          
-            <PivotItem Header="All">
+            <PivotItem Header="All"> 
                 <GridView ItemsSource="{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
                     <GridView.ItemTemplate>
                         <DataTemplate >
