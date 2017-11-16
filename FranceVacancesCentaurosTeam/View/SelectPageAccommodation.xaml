@@ -20,7 +20,7 @@
             <RowDefinition Height="30*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        
+
         <Grid.Background>
             <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill" />
         </Grid.Background>
@@ -28,8 +28,8 @@
             <viewModel:AccommodationCollectionVM/>
         </Grid.DataContext>
         <Pivot Grid.Column="1" Margin="0,0,0,0" Grid.Row="1" x:Name="pivotcontrol">
-         
-            <PivotItem Header="All"> 
+
+            <PivotItem Header="All">
                 <GridView ItemsSource="{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
                     <GridView.ItemTemplate>
                         <DataTemplate >
@@ -40,7 +40,7 @@
                                     <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Style}"/>
                                     <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{Binding Rent}"/>
                                     <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
-                                        <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
+                                        <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue" DataContext="{Binding Location}"/>
                                     </Border>
                                 </StackPanel>
                             </Border>
