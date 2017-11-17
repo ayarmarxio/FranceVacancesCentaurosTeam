@@ -105,7 +105,7 @@
                 </StackPanel>
             </SplitView.Pane>
         </SplitView>
-        <SplitView Name="DisplayLogin" DisplayMode="Overlay" FlowDirection="RightToLeft" IsPaneOpen="False" Grid.Column="2" HorizontalAlignment="Right" Margin="0,50,0,0">
+        <SplitView Name="DisplayLogin" DisplayMode="Overlay" FlowDirection="RightToLeft" IsPaneOpen="False" Grid.Column="2" HorizontalAlignment="Right" Margin="0,50,0,0" PaneClosed="DisplayLogin_PaneClosed">
             <SplitView.PaneBackground>
                 <SolidColorBrush Color="Transparent"/>
             </SplitView.PaneBackground>

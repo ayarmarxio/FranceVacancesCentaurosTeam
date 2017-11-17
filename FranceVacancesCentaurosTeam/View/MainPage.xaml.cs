@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Devices.Input;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -85,18 +87,16 @@ namespace FranceVacancesCentaurosTeam
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            bool ContentOpen;
             DisplayLogin.IsPaneOpen = !DisplayLogin.IsPaneOpen;
-            if (ContentOpen = false)
+            if (DisplayLogin.IsPaneOpen)
             {
                 Arrow.Content = "6";
-                ContentOpen = true;
             }
-            else
-            {
-                Arrow.Content = "5";
-                ContentOpen = false;
-            }
+        }
+
+        private void DisplayLogin_PaneClosed(SplitView sender, object args)
+        {
+            Arrow.Content = "5";
         }
     }
 }
