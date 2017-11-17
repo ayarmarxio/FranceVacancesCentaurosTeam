@@ -18,8 +18,8 @@ namespace FranceVacancesCentaurosTeam.ViewModel
         public ObservableCollection<Accommodation> filteredCottages { get; set; }
 
         public ObservableCollection<Accommodation> filteredFlat { get; set; }
-        //public ObservableCollection<Accommodation> filteredBungalow { get; set; }
-        //public ObservableCollection<Accommodation> filteredVilla { get; set; }
+        public ObservableCollection<Accommodation> filteredBungalow { get; set; }
+        public ObservableCollection<Accommodation> filteredVilla { get; set; }
 
         public Accommodation SelectedItem
         {
@@ -50,23 +50,10 @@ namespace FranceVacancesCentaurosTeam.ViewModel
             filteredCottages = new ObservableCollection<Accommodation>();
             FilterCottage();
 
-            Accommodation = new ObservableCollection<Accommodation>
-            {
-                 new Accommodation ("Flat", "$350", "ms-appx:///Assets/Apartment/cannes1aMain.jpg","Cannes", "Beautiful house description", "1" ),
-                 new Accommodation("Flat", "$360", "ms-appx:///Assets/Apartment/cannes2aMain.jpg", "Cannes", "Beautiful house description", "2"),
-                 new Accommodation ("Cottage", "$455", "ms-appx:///Assets/Apartment/chamonix1aMain.jpg","Chamonix", "Beautiful house description", "3"),
-                 new Accommodation ("Cottage", "$550", "ms-appx:///Assets/Apartment/chamonix2aMain.jpg","Chamonix", "Beautiful house description", "4"),
-                 new Accommodation ("Flat", "$450", "ms-appx:///Assets/Apartment/lyon1aMain.jpg","Lyon", "Beautiful house description", "5"),
-                 new Accommodation ("Flat", "$570", "ms-appx:///Assets/Apartment/lyon2a.jpg","Lyon", "Beautiful house description", "6"),
-                 new Accommodation ("Flat", "$380", "ms-appx:///Assets/Apartment/nice1Main.jpg","Nice", "Beautiful house description", "7"),
-                 new Accommodation ("Flat", "$420", "ms-appx:///Assets/Apartment/nice2aMain.jpg","Nice", "Beautiful house description", "8"),
-            };
+           
 
-            SelectedItem = new Accommodation();
-        
-
-           filteredFlat = new ObservableCollection<Accommodation>();
-           FilterFlat();
+           //filteredFlat = new ObservableCollection<Accommodation>();
+           //FilterFlat();
 
             //filteredVilla = new ObservableCollection<Accommodation>();
             //FilterVilla();
@@ -97,18 +84,21 @@ namespace FranceVacancesCentaurosTeam.ViewModel
                 }
             }
         }
-        
 
-        public void FilterFlat()
-        {
-            foreach (Accommodation Flat in Accommodation)
-            {
-                if (Flat.Style == "Flat")
-                {
-                    filteredCottages.Add(Flat);
-                }
-            }
-        }
+
+
+
+
+        //public void FilterFlat()
+        //{
+        //    foreach (Accommodation Flat in Accommodation)
+        //    {
+        //        if (Flat.Style == "Flat")
+        //        {
+        //            filteredCottages.Add(Flat);
+        //        }
+        //    }
+        //}
 
         //public void FilterVilla()
         //{
