@@ -82,5 +82,21 @@ namespace FranceVacancesCentaurosTeam
         {
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            bool ContentOpen;
+            DisplayLogin.IsPaneOpen = !DisplayLogin.IsPaneOpen;
+            if (ContentOpen = false)
+            {
+                Arrow.Content = "6";
+                ContentOpen = true;
+            }
+            else
+            {
+                Arrow.Content = "5";
+                ContentOpen = false;
+            }
+        }
     }
 }
