@@ -30,5 +30,15 @@ namespace FranceVacancesCentaurosTeam.View
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
