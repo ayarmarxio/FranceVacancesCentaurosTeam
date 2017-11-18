@@ -25,12 +25,13 @@
         </Grid.Background>
 
         <Image Source="ms-appx:///Assets/FRanceVacancesLogo1.png" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" Stretch="Uniform"/>
-        <Button Content="Back" HorizontalAlignment="Right" Height="auto" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="auto" Click="Button_Click"/>
+        <Button Content="Back" HorizontalAlignment="Right" Height="auto" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="Auto" Click="Button_Click"/>
 
-        <ListView HorizontalAlignment="Left" Height="491" VerticalAlignment="Top" Width="301" ItemsSource="{Binding Scout}" Background="BlueViolet" Margin="-1,5,0,0" Grid.Row="1" Grid.RowSpan="2"/>
+    
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Welcome to the Host Page." VerticalAlignment="Top" Height="76" Width="680" FontSize="36" TextChanged="TextBox_TextChanged" TextAlignment="Center" FontFamily="MV Boli" Foreground="#FF826262"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="0,95,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Please fill in the details below:" VerticalAlignment="Top" Height="50" Width="680" TextAlignment="Center" FontFamily="Segoe Print" Foreground="#FF512929" FontSize="18"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="60,204,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        
         <Grid Grid.ColumnSpan="3" Grid.RowSpan="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="15*"/>
@@ -59,9 +60,21 @@
             <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="355,287,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" Width="315"/>
             <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="355,378,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" Width="315"/>
             <Button Content=" Add  Host" Background="DarkOrange" Foreground="AliceBlue" DataContext="{Binding Location}" Grid.Column="1" Margin="355,450,0,0" Grid.Row="1" Width="315" FontSize="20" Height="41"/>
-
-
         </Grid>
+        <ListView HorizontalAlignment="Left" Height="500" Margin="0,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="300"  ItemsSource="{Binding}"
+                  SelectedItem="{Binding SelectedItem, Mode=TwoWay }" Background="DarkOrange">
+            <ListView.ItemTemplate>
+                <DataTemplate  >
+                    <StackPanel >
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="{Binding}"/>
+                            <TextBlock Text="{Binding}" FontWeight="Bold" />
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+               
+        </ListView>
 
 
 

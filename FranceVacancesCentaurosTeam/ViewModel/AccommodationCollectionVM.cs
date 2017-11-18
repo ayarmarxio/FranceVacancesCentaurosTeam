@@ -30,7 +30,6 @@ namespace FranceVacancesCentaurosTeam.ViewModel
             }
         }
         
-
         public AccommodationCollectionVM()
         {
             Accommodation = new ObservableCollection<Accommodation>

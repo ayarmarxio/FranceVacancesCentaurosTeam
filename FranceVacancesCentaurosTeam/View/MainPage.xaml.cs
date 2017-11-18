@@ -31,7 +31,7 @@ namespace FranceVacancesCentaurosTeam
         {
             this.InitializeComponent();
         }
-      
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
@@ -75,12 +75,26 @@ namespace FranceVacancesCentaurosTeam
         {
             Frame.Navigate(typeof(SelectPageAccommodation), "Bungalow");
         }
-       
+
 
 
         private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            DisplayLogin.IsPaneOpen = !DisplayLogin.IsPaneOpen;
+            if (DisplayLogin.IsPaneOpen)
+            {
+                Arrow.Content = "6";
+            }
+        }
+
+        private void DisplayLogin_PaneClosed(SplitView sender, object args)
+        {
+            Arrow.Content = "5";
         }
     }
 }

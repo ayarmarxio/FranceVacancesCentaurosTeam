@@ -30,7 +30,7 @@
         </Grid.DataContext>
         <Pivot Grid.Column="1" Margin="0,0,0,0" Grid.Row="1" x:Name="pivotcontrol">
             <PivotItem Header="All">
-                <GridView ItemsSource="{Binding filteredCottages}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
+                <GridView ItemsSource= "{Binding FilteredCottage}"  SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
                     <GridView.ItemTemplate>
                         <DataTemplate>
                             <Border BorderThickness="2" BorderBrush="White">
