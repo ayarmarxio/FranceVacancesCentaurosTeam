@@ -105,5 +105,24 @@
                 </StackPanel>
             </SplitView.Pane>
         </SplitView>
+        <SplitView Name="DisplayLogin" DisplayMode="Overlay" FlowDirection="RightToLeft" IsPaneOpen="False" Grid.Column="2" HorizontalAlignment="Right" Margin="0,50,0,0" PaneClosed="DisplayLogin_PaneClosed">
+            <SplitView.PaneBackground>
+                <SolidColorBrush Color="Transparent"/>
+            </SplitView.PaneBackground>
+            <SplitView.Pane>
+                <StackPanel Width="200" Margin="0,0,0,0" HorizontalAlignment="Center">
+                    <Border BorderBrush="White" BorderThickness="2">
+                        <Button x:Name="Login" Content="Login" Foreground="White" FontSize="30"  FontFamily="Trebuchet MS" Height="70" Width="200" HorizontalAlignment="Center"/>
+                    </Border>
+                    <Border BorderBrush="White" BorderThickness="2">
+                        <Button x:Name="Host" Content="Host" Foreground="White" FontSize="30"  FontFamily="Trebuchet MS" Height="70" Width="200" HorizontalAlignment="Center"/>
+                    </Border>
+                </StackPanel>
+            </SplitView.Pane>
+            <Grid/>
+        </SplitView>
+        <Border BorderBrush="White" BorderThickness="2" Grid.Column="2" Width="44" VerticalAlignment="Top" HorizontalAlignment="Right" Height="36" Margin="0,15,70,0">
+            <Button x:Name="Arrow" Content="5" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontFamily="Webdings" Click="Button_Click_1" Foreground="White"/>
+        </Border>
     </Grid>
 </Page>
