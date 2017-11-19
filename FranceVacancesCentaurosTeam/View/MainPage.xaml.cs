@@ -1,20 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
+﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 using FranceVacancesCentaurosTeam.View;
-using FranceVacancesCentaurosTeam.ViewModel;
-using FranceVacancesCentaurosTeam.Model;
 
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -29,7 +15,7 @@ namespace FranceVacancesCentaurosTeam
 
         public MainPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
       
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -38,49 +24,35 @@ namespace FranceVacancesCentaurosTeam
             //Frame.Navigate(typeof(SelectPageAccommodation));
         }
 
-        private void Button_Click1(object sender, RoutedEventArgs e)
-        {
-            MyApartmentSplitView.IsPaneOpen = !MyApartmentSplitView.IsPaneOpen;
-        }
-
+       
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SelectPageCity), "Cannes");
+            Frame.Navigate(typeof(Booking), "Booking");
         }
         private void Button_Click3(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SelectPageCity), "Chamonix");
+            Frame.Navigate(typeof(Booking), "Booking");
         }
         private void Button_Click4(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(SelectPageCity), "Lyon");
+            Frame.Navigate(typeof(Booking), "Booking");
         }
         private void Button_Click5(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(SelectPageCity), "Nice");
+            Frame.Navigate(typeof(Booking), "Booking");
         }
-        private void Button_Click6(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SelectPageAccommodation), "Cottage");
-        }
-        private void Button_Click7(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SelectPageAccommodation), "Flat");
-        }
-        private void Button_Click8(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SelectPageAccommodation), "Villa");
-        }
-        private void Button_Click9(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SelectPageAccommodation), "Bungalow");
-        }
+        
        
 
 
         private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click1(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(HostPage), "Host");
         }
     }
 }

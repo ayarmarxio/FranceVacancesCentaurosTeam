@@ -27,7 +27,7 @@
         <Image Source="ms-appx:///Assets/FRanceVacancesLogo1.png" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" Stretch="Uniform"/>
         <Button Content="Back" HorizontalAlignment="Right" Height="auto" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="auto" Click="Button_Click"/>
 
-        <ListView HorizontalAlignment="Left" Height="491" VerticalAlignment="Top" Width="301" ItemsSource="{Binding Scout}" Background="BlueViolet" Margin="-1,5,0,0" Grid.Row="1" Grid.RowSpan="2"/>
+        <ListView HorizontalAlignment="Left" Height="491" VerticalAlignment="Top" Width="301" ItemsSource="{Binding Scout}"  Margin="-1,5,0,0" Grid.Row="1" Grid.RowSpan="2"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Welcome to the Host Page." VerticalAlignment="Top" Height="76" Width="680" FontSize="36" TextChanged="TextBox_TextChanged" TextAlignment="Center" FontFamily="MV Boli" Foreground="#FF826262"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="0,95,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Please fill in the details below:" VerticalAlignment="Top" Height="50" Width="680" TextAlignment="Center" FontFamily="Segoe Print" Foreground="#FF512929" FontSize="18"/>
         <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="60,204,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>

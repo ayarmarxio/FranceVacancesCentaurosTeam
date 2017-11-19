@@ -46,9 +46,7 @@
             <Grid.Background>
                 <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill" />
             </Grid.Background>
-            <Grid.DataContext>
-                <franceVacancesCentaurosTeam:BookingVM/>
-            </Grid.DataContext>
+           
 
 
     </Grid>
