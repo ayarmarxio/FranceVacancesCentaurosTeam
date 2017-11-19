@@ -30,7 +30,7 @@
         </Grid.DataContext>
         <Pivot Grid.Column="1" Margin="0,0,0,0" Grid.Row="1" x:Name="pivotcontrol">
             <PivotItem Header="All">
-                <GridView ItemsSource= "{Binding FilteredCottage}"  SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
+                <GridView ItemsSource= "{Binding Accommodation}"  SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
                     <GridView.ItemTemplate>
                         <DataTemplate>
                             <Border BorderThickness="2" BorderBrush="White">
@@ -48,7 +48,7 @@
                 </GridView>
             </PivotItem>
             <PivotItem Header="Cannes" >
-            <GridView ItemsSource= "{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
+            <GridView ItemsSource= "{Binding filteredCannes}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
                 <GridView.ItemTemplate>
                     <DataTemplate>
                             <Border BorderThickness="2" BorderBrush="White">
@@ -68,7 +68,7 @@
           </PivotItem>
             
         <PivotItem Header="Chamonix">
-            <GridView ItemsSource= "{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
+            <GridView ItemsSource= "{Binding filteredChamonix}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
                     <GridView.ItemTemplate>
                     <DataTemplate>
                         <Border BorderThickness="2" BorderBrush="White">
@@ -88,7 +88,7 @@
         </PivotItem>
         
         <PivotItem Header="Lyon">
-            <GridView ItemsSource= "{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
+            <GridView ItemsSource= "{Binding filteredLyon}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
                     <GridView.ItemTemplate>
                     <DataTemplate>
                         <Border BorderThickness="2" BorderBrush="White">
@@ -108,7 +108,7 @@
         </PivotItem>
         
         <PivotItem Header="Nice">
-            <GridView ItemsSource= "{Binding Accommodation}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
+            <GridView ItemsSource= "{Binding filteredNice}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
                     <GridView.ItemTemplate>
                     <DataTemplate>
                         <Border BorderThickness="2" BorderBrush="White">
