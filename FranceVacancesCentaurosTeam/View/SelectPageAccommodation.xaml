@@ -41,7 +41,7 @@
                                     <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Style}"/>
                                     <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{Binding Rent}"/>
                                     <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
-                                        <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue" DataContext="{Binding Location}"/>
+                                        <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue" DataContext="{Binding Booking}"/>
                                     </Border>
                                 </StackPanel>
                             </Border>

@@ -36,7 +36,7 @@
                 <Run Text="+33 267 894 &#xA;or      e-mail: france.vacancies@vacancies.fr "/>
             </TextBlock>
             <Image Source="ms-appx:///Assets/FRanceVacancesLogo1.png" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" Stretch="Uniform"/>
-            <Button Content="Back" HorizontalAlignment="Right" Height="auto" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="auto" Click="Button_Click"/>
+            <Button Content="Back" HorizontalAlignment="Right" Height="auto" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="118" Click="Button_Click"/>
             <Grid.RowDefinitions>
                 <RowDefinition Height="9*"/>
                 <RowDefinition Height="30*"/>

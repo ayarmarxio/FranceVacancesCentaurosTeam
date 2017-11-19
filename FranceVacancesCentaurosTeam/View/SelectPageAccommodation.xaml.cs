@@ -30,7 +30,7 @@ namespace FranceVacancesCentaurosTeam.View
 
         private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            Frame.Navigate(typeof(Booking), "Book");
         }
         public SelectPageAccommodation()
         {
