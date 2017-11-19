@@ -15,19 +15,21 @@ namespace FranceVacancesCentaurosTeam.View
             this.InitializeComponent();
         }
 
-        private void Button_ClickBack(object sender, RoutedEventArgs e)
-        {
 
-        }
 
-        private void Book_Now(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+            Frame.Navigate(typeof(Invoice), "Invoice");
+
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage), "Home");
+        }
+
+
     }
 }

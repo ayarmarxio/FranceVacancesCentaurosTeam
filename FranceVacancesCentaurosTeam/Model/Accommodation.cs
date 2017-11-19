@@ -8,7 +8,7 @@ namespace FranceVacancesCentaurosTeam.Model
 {
     public class Accommodation
     {
-
+        public string Booking { get; set; }
         public string Style { get; set; }
         public string Rent { get; set; }
         public string MainImage { get; set; }
@@ -19,6 +19,7 @@ namespace FranceVacancesCentaurosTeam.Model
 
         public Accommodation
             (
+            string booking,
             string style,
             string rent,
             string mainimage,
@@ -27,6 +28,7 @@ namespace FranceVacancesCentaurosTeam.Model
             string id
             )
         {
+            Booking = booking;
             Style = style;
             Rent = rent;
             MainImage = mainimage;
@@ -36,6 +38,19 @@ namespace FranceVacancesCentaurosTeam.Model
         }
 
        
+        public Accommodation(string v)
+        {
+        }
+
+        public Accommodation(string v, string v1, string v2, string v3, string v4, string v5) : this(v)
+        {
+            this.v1 = v1;
+            this.v2 = v2;
+            this.v3 = v3;
+            this.v4 = v4;
+            this.v5 = v5;
+        }
+
         public Accommodation()
         {
         }
@@ -46,11 +61,22 @@ namespace FranceVacancesCentaurosTeam.Model
         //}
 
         public static Accommodation _accommodation;
+        private string v1;
+        private string v2;
+        private string v3;
+        private string v4;
+        private string v5;
 
         public void SetAccommodation(Accommodation accommodation)
         {
             _accommodation = accommodation;
         }
+
+        public string GetBooking()
+        {
+            return _accommodation.Booking;
+        }
+
         public string GetID()
         {
             return _accommodation.ID;

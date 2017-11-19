@@ -22,7 +22,7 @@ namespace FranceVacancesCentaurosTeam
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
-            //Frame.Navigate(typeof(SelectPageAccommodation));
+            //Frame.Navigate(typeof(AccommodationCollectionMV));
         }
 
        
@@ -48,7 +48,7 @@ namespace FranceVacancesCentaurosTeam
 
         private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            Frame.Navigate(typeof(Booking), "Book");
         }
 
         private void Button_Click1(object sender, RoutedEventArgs e)

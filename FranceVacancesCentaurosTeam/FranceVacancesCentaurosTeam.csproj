@@ -100,7 +100,6 @@
     <Compile Include="Model\City.cs" />
     <Compile Include="Model\Owner.cs" />
     <Compile Include="ViewModel\AccommodationCollectionVM.cs" />
-    <Compile Include="ViewModel\BookingVM.cs" />
     <Compile Include="ViewModel\CityVM.cs" />
     <Compile Include="View\Booking.xaml.cs">
       <DependentUpon>Booking.xaml</DependentUpon>
