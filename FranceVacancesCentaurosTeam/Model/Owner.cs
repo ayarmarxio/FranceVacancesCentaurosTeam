@@ -10,7 +10,8 @@ namespace FranceVacancesCentaurosTeam.Model
     public class Owner
     {
         public string Cpr{ get; set; }
-        public string Name { get; set; }
+        public string Name {get;  set; }
+
         public string TelephoneNumber { get; set; }
         //public string ImageUrl { get; set; }
 

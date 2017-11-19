@@ -100,7 +100,6 @@
     <Compile Include="Model\Owner.cs" />
     <Compile Include="ViewModel\AccommodationCollectionVM.cs" />
     <Compile Include="ViewModel\NotifyChangePropertyClass.cs" />
-    <Compile Include="ViewModel\NotifyPropertyChangedInvocatorAttribute.cs" />
     <Compile Include="ViewModel\OwnerCollection.cs" />
     <Compile Include="View\Booking.xaml.cs">
       <DependentUpon>Booking.xaml</DependentUpon>

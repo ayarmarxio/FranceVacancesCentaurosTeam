@@ -14,6 +14,7 @@ namespace FranceVacancesCentaurosTeam.Commands
         private readonly Func<bool> _canExecute;
 
         public event EventHandler CanExecuteChanged;
+
         public RelayCommand (Action execute)
             :this(execute,null)
         {

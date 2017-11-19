@@ -13,9 +13,9 @@ namespace FranceVacancesCentaurosTeam.ViewModel
     public class NotifyChangePropertyClass : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-   
+        
 
-       [NotifyPropertyChangedInvocator]
+        [NotifyPropertyChangedInvocator]
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
