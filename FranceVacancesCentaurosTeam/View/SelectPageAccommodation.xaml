@@ -49,6 +49,7 @@
                     </GridView.ItemTemplate>
                 </GridView>
             </PivotItem>
+            
             <PivotItem Header="Cottage" >
                 <GridView ItemsSource= "{Binding filteredCottages}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" >
                     <GridView.ItemTemplate>
