@@ -16,12 +16,7 @@ namespace FranceVacancesCentaurosTeam.Model
         //public string ImageUrl { get; set; }
 
 
-        //private string _cpr;
-        //private string _name;
-        //private string _telephoneNumber;
-        //private string _imageUrl;
-
-        public Owner( string cpr, string name, string telephoneNumber )
+          public Owner( string cpr, string name, string telephoneNumber )
         {
             Cpr = cpr;
             Name = name;

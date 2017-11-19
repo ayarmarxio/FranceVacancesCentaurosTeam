@@ -95,9 +95,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="Model\Accommodation.cs" />
     <Compile Include="Model\Owner.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\AccommodationCollectionVM.cs" />
     <Compile Include="ViewModel\NotifyChangePropertyClass.cs" />
     <Compile Include="ViewModel\OwnerCollection.cs" />

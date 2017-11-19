@@ -1,4 +1,4 @@
-﻿using FranceVacancesCentaurosTeam.Commands;
+﻿using FranceVacancesCentaurosTeam.ViewModel;
 using FranceVacancesCentaurosTeam.Model;
 using FranceVacancesCentaurosTeam.View;
 using System;
@@ -29,7 +29,7 @@ namespace FranceVacancesCentaurosTeam.ViewModel
                 OnPropertyChanged(nameof(SelectedItem));
             }
         }
-                
+
 
         public OwnerCollection()
         {
@@ -47,8 +47,8 @@ namespace FranceVacancesCentaurosTeam.ViewModel
             };
 
             AddItemCommand = new RelayCommand(DoAddItem);
-            
-            AddNewOwner = new Owner();
+
+            AddNewOwner = new  Owner();
             SelectedItem = new Owner();
         }
 

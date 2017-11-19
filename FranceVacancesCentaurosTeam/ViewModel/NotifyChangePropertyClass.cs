@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-
+using FranceVacancesCentaurosTeam.Annotations;
 
 
 namespace FranceVacancesCentaurosTeam.ViewModel
@@ -13,10 +13,8 @@ namespace FranceVacancesCentaurosTeam.ViewModel
     public class NotifyChangePropertyClass : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        
 
         [NotifyPropertyChangedInvocator]
-
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
