@@ -49,7 +49,10 @@ namespace FranceVacancesCentaurosTeam.ViewModel
             filteredCottages = new ObservableCollection<Accommodation>();
             FilterCottage();
 
+            SelectedItem = new Accommodation();
            
+            filteredFlat = new ObservableCollection<Accommodation>();
+            FilterFlat();
 
            //filteredFlat = new ObservableCollection<Accommodation>();
            //FilterFlat();
@@ -83,21 +86,17 @@ namespace FranceVacancesCentaurosTeam.ViewModel
                 }
             }
         }
-
-
-
-
-
-        //public void FilterFlat()
-        //{
-        //    foreach (Accommodation Flat in Accommodation)
-        //    {
-        //        if (Flat.Style == "Flat")
-        //        {
-        //            filteredCottages.Add(Flat);
-        //        }
-        //    }
-        //}
+        
+        public void FilterFlat()
+        {
+            foreach (Accommodation Flat in Accommodation)
+            {
+                if (Flat.Style == "Flat")
+                {
+                    filteredFlat.Add(Flat);
+                }
+            }
+        }
 
         //public void FilterVilla()
         //{
