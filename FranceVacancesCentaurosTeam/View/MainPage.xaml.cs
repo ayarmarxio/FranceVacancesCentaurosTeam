@@ -1,6 +1,7 @@
 ﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using FranceVacancesCentaurosTeam.View;
+using FranceVacancesCentaurosTeam.ViewModel;
 
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -27,19 +28,19 @@ namespace FranceVacancesCentaurosTeam
        
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Booking), "Booking");
+            Frame.Navigate(typeof(SelectPageAccommodation), parameter: "Cannes");
         }
         private void Button_Click3(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Booking), "Booking");
+            Frame.Navigate(typeof(SelectPageAccommodation), "Chamonix");
         }
         private void Button_Click4(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Booking), "Booking");
+            Frame.Navigate(typeof(SelectPageAccommodation), "Lyon");
         }
         private void Button_Click5(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Booking), "Booking");
+            Frame.Navigate(typeof(SelectPageAccommodation), "Nice");
         }
         
        

@@ -29,7 +29,10 @@
         </Grid.DataContext>
         <Image Source="ms-appx:///Assets/FRanceVacancesLogo1.png" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" Stretch="Uniform"/>
 
-        <GridView ItemsSource="{Binding Accommodation}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
+        <GridView ItemsSource="{Binding Accommodation}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
+            <GridView.SelectedItem>
+                <Binding Path="SelectedItem" Mode="TwoWay" />
+            </GridView.SelectedItem>
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -42,7 +45,7 @@
                         <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" 
                                    Text="{Binding Rent}"/>
                         <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
-                            <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue" DataContext="{Binding Booking}" />
+                            <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue" DataContext="{Binding BookingVM}" />
                         </Border>
                     </StackPanel>
 

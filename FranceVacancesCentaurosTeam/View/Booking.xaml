@@ -28,10 +28,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Grid.DataContext>
-            <local:Booking/>
-        </Grid.DataContext>
-
+        
         <Image Source="ms-appx:///Assets/FRanceVacancesLogo1.png" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" Stretch="Uniform"/>
 
         <RelativePanel Grid.Row="1" HorizontalAlignment="Left">
