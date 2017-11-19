@@ -27,15 +27,16 @@
 
         <Image Source="ms-appx:///Assets/FRanceVacancesLogo1.png" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" Stretch="Uniform"/>
 
-        <GridView ItemsSource="{x:Bind Apartments}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
+        <GridView ItemsSource="{x:Bind }" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
             <GridView.ItemTemplate>
-                <DataTemplate x:DataType="data:Apartment">
+                <DataTemplate >
                     <Border BorderThickness="2" BorderBrush="White">
                         <StackPanel>
-                            <Image  Source="{x:Bind MainImage}" Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
-                            <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Location}"/>
+                            <Image Source="{x:Bind }" Height="170" Width="300" Stretch="UniformToFill"
+                                   HorizontalAlignment="Center" />
+                            <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind }"/>
                             <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Style}"/>
-                            <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{x:Bind Rent}"/>
+                            <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{x:Bind }"/>
                             <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
                                 <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
                             </Border>

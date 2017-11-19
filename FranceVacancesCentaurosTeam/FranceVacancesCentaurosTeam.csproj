@@ -95,11 +95,17 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BookingVM.cs" />
     <Compile Include="Commands\RelayCommands.cs" />
+    <Compile Include="InvoiceVM.cs" />
     <Compile Include="Model\Accommodation.cs" />
     <Compile Include="Model\City.cs" />
     <Compile Include="Model\Owner.cs" />
+    <Compile Include="ViewModelBookingVM.xaml.cs">
+      <DependentUpon>ViewModelBookingVM.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\AccommodationCollectionVM.cs" />
+    <Compile Include="ViewModel\BookingVM.cs" />
     <Compile Include="ViewModel\CityVM.cs" />
     <Compile Include="View\Booking.xaml.cs">
       <DependentUpon>Booking.xaml</DependentUpon>
@@ -173,6 +179,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ViewModelBookingVM.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\Booking.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -5,10 +5,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Model="using:FranceVacancesCentaurosTeam.Model"
+    xmlns:ViewModel="BookingVM"
+    xmlns:ViewModel1="using:FranceVacancesCentaurosTeam.ViewModel"
+    xmlns:franceVacancesCentaurosTeam="using:FranceVacancesCentaurosTeam"
     x:Class="FranceVacancesCentaurosTeam.View.Booking"
 
     mc:Ignorable="d">
-
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15*"/>
@@ -25,6 +28,9 @@
         <Grid.Background>
             <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
+        <Grid.DataContext>
+            <franceVacancesCentaurosTeam:BookingVM/>
+        </Grid.DataContext>
 
         <Image Source="ms-appx:///Assets/FRanceVacancesLogo1.png" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" Stretch="Uniform"/>
 
@@ -42,6 +48,9 @@
 
             <Image Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
 
+            <TextBox HorizontalAlignment="Left" Height="229" TextWrapping="Wrap" Text="                           Great !&#xD;&#xA;       You are one step away from booking this accommodation. To compete reservation please confirm down below.&#xD;" VerticalAlignment="Top" Width="680" Margin="0,115,-609,-312" FontSize="24" FontFamily="Segoe Print" Foreground="#FF8E5B5B"/>
+            <Button Content=" Complete Booking" Background="DarkOrange" Foreground="AliceBlue" Command="{Binding InvoiceCommand }" DataContext="{Binding Location}" Grid.Column="1" Margin="10,433,-10,0" Grid.Row="1" Width="670" FontSize="20" Height="58" Click="Button_Click"/>
+        
         </RelativePanel>
 
 

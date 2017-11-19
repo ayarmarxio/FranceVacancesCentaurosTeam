@@ -5,6 +5,9 @@
     xmlns:local="using:FranceVacancesCentaurosTeam.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModel="InvoiceVM"
+    xmlns:ViewModel1="using:FranceVacancesCentaurosTeam.ViewModel"
+    xmlns:franceVacancesCentaurosTeam="using:FranceVacancesCentaurosTeam"
     mc:Ignorable="d">
 
 
@@ -43,9 +46,12 @@
             <Grid.Background>
                 <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill" />
             </Grid.Background>
+            <Grid.DataContext>
+                <franceVacancesCentaurosTeam:BookingVM/>
+            </Grid.DataContext>
 
 
-        </Grid>
+    </Grid>
 
 </Page>
 

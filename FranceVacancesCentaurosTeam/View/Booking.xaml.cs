@@ -24,7 +24,8 @@ namespace FranceVacancesCentaurosTeam.View
     {
         public Booking()
         {
-            this.InitializeComponent();
+            this.
+                InitializeComponent();
         }
 
         private void Button_ClickBack(object sender, RoutedEventArgs e)
@@ -33,6 +34,11 @@ namespace FranceVacancesCentaurosTeam.View
         }
 
         private void Book_Now(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }

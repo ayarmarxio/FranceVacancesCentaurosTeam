@@ -47,7 +47,7 @@
             <Grid.Background>
                 <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill" />
             </Grid.Background>
-
+          
             <Image Source="ms-appx:///Assets/FRanceVacancesLogo1.png" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" Stretch="Uniform"/>
             <Button Content="Back" HorizontalAlignment="Right" Height="auto" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="auto" Click="Button_Click"/>
             <TextBlock Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Welcome to the Host Page." VerticalAlignment="Top" Height="76" Width="680" FontSize="36" TextAlignment="Center" FontFamily="MV Boli" Foreground="#FF826262"/>
