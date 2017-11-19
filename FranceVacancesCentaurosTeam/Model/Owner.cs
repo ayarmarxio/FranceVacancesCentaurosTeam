@@ -7,80 +7,102 @@ using System.Threading.Tasks;
 
 namespace FranceVacancesCentaurosTeam.Model
 {
-    class Owner : INotifyPropertyChanged
-    
-    
+    public class Owner
+    {
+        public string Cpr{ get; set; }
+        public string Name { get; set; }
+        public string TelephoneNumber { get; set; }
+        //public string ImageUrl { get; set; }
+
+
+        //private string _cpr;
+        //private string _name;
+        //private string _telephoneNumber;
+        //private string _imageUrl;
+
+        public Owner( string cpr, string name, string telephoneNumber )
         {
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private string _cpr;
-        private string _name;
-        private string _tlfnr;
+            Cpr = cpr;
+            Name = name;
+            TelephoneNumber = telephoneNumber;
+            //ImageUrl = imageUrl;
+        }
 
         public Owner()
         {
+
         }
 
-        public string Cpr
+        public override string ToString()
         {
-            get { return this._cpr; }
-            set
-            {
-                this._cpr = value;
-                NotifyPropertyChanged("Cpr No");
-            }
-        }
-
-            private void NotifyPropertyChanged(string cprNo)
-            {
-                throw new NotImplementedException();
-            }
-
-
-            public string Name
-        {
-            get { return this._name; }
-            set
-            {
-                this._name = value;
-                NotifyPropertyChanged("Name");
-            }
+            return Name;
         }
 
 
-        public string Tlfnr
-        {
-            get { return this._tlfnr; }
-            set
-            {
-                this._tlfnr = value;
-                NotifyPropertyChanged("Tlfnr");
-            }
-        }
+        //public string Cpr
+        //{
+        //    get { return this._cpr; }
+        //    set
+        //    {
+        //        this._cpr = value;
+        //        NotifyPropertyChanged("Cpr No");
+        //    }
+        //}
 
-        public Owner[] GetOwner()
-        {
-
-            return new[]
-            {
-                new Owner {Cpr = "011", Name = "Pierre Bonchance", Tlfnr = "35.65.42.11"},
-                new Owner {Cpr= "012", Name = "Antoine Valois", Tlfnr = "67.45.21.37"},
-                new Owner {Cpr = "013", Name = "Marcelle Guerlain", Tlfnr = "39.45.69.00"},
+        //private void NotifyPropertyChanged(string cprNo)
+        //{
+        //    throw new NotImplementedException();
 
 
 
-            };
+        //public string Name
+        //{
+        //    get { return this._name; }
+        //    set
+        //    {
+        //        this._name = value;
+        //        NotifyPropertyChanged("Name");
+        //    }
+        //}
 
-            void NotifyPropertyChanged(string propertyName)
-            {
-                if (this.PropertyChanged != null)
-                {
-                    PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-                }
-            }
-        }
-    }
-}
+
+        //public string TelephoneNumber
+        //{
+        //    get { return this._telephoneNumber; }
+        //    set
+        //    {
+        //        this._telephoneNumber = value;
+        //        NotifyPropertyChanged("TelephoneNumber");
+        //    }
+        //}
+
+        //public string ImageUrl
+        //{
+        //    get { return this._telephoneNumber; }
+        //    set
+        //    {
+        //        this._telephoneNumber = value;
+        //        NotifyPropertyChanged("ImageUrl");
+        //    }
+        //}
+
+
+
+
+        //public Owner[] GetOwner()
+        //{
+        //    return new[]
+        //    {
+        //        new Owner {Cpr = "011", Name = "Pierre Bonchance", Tlfnr = "35.65.42.11"},
+        //        new Owner {Cpr= "012", Name = "Antoine Valois", Tlfnr = "67.45.21.37"},
+        //        new Owner {Cpr = "013", Name = "Marcelle Guerlain", Tlfnr = "39.45.69.00"},
+
+
+
+    };
+
+
+ }
+    
+
 

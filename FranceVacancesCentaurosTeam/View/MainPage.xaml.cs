@@ -76,6 +76,11 @@ namespace FranceVacancesCentaurosTeam
             Frame.Navigate(typeof(SelectPageAccommodation), "Bungalow");
         }
 
+        private void Button_Click10(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(HostPage));
+        }
+
 
 
         private void GridView_SelectionChanged(object sender, SelectionChangedEventArgs e)

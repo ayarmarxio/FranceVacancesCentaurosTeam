@@ -115,7 +115,7 @@
                         <Button x:Name="Login" Content="Login" Foreground="White" FontSize="30"  FontFamily="Trebuchet MS" Height="70" Width="200" HorizontalAlignment="Center"/>
                     </Border>
                     <Border BorderBrush="White" BorderThickness="2">
-                        <Button x:Name="Host" Content="Host" Foreground="White" FontSize="30"  FontFamily="Trebuchet MS" Height="70" Width="200" HorizontalAlignment="Center"/>
+                        <Button x:Name="Host" Content="Host" Foreground="White" FontSize="30" Click="Button_Click10" FontFamily="Trebuchet MS" Height="70" Width="200" HorizontalAlignment="Center"/>
                     </Border>
                 </StackPanel>
             </SplitView.Pane>
