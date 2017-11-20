@@ -80,6 +80,14 @@ namespace FranceVacancesCentaurosTeam
         {
             Frame.Navigate(typeof(HostPage));
         }
+        private void Button_Click11(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
+        private void Button_Click12(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Booking));
+        }
 
 
 
@@ -101,5 +109,7 @@ namespace FranceVacancesCentaurosTeam
         {
             Arrow.Content = "5";
         }
+
+        
     }
 }

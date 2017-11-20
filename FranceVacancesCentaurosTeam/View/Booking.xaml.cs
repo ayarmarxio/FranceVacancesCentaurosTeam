@@ -36,5 +36,14 @@ namespace FranceVacancesCentaurosTeam.View
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
+        private void Button_Click1(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Invoice));
+        }
     }
 }

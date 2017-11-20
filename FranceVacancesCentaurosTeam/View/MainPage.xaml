@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill" />
+            <ImageBrush ImageSource="ms-appx:///Assets/paris-eiffel-tower-kinkade-oil-paintings.jpg" Stretch="UniformToFill" />
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="15*"/>
@@ -20,20 +20,24 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="9*"/>
-            <RowDefinition Height="30*"/>
+            <RowDefinition Height="31*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
         <Grid.DataContext>
             <viewModel:AccommodationCollectionVM/>
         </Grid.DataContext>
-        <Image Source="ms-appx:///Assets/FRanceVacancesLogo1.png" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" Stretch="Uniform"/>
-        
-        <GridView ItemsSource="{Binding Accommodation}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
+        <TextBlock Text="France Vacances" Grid.Row="0" HorizontalAlignment="Center" FontSize="170" VerticalAlignment="Center" Width="auto" Height="auto" Margin="0,0,0,0" Grid.Column="1" FontFamily="Mistral" Foreground="#FFA5180A"/>
+
+        <GridView ItemsSource="{Binding Accommodation}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged" >
+            
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderThickness="2" BorderBrush="White">
+                    <Border BorderThickness="3" BorderBrush="Black">
                         <StackPanel>
-                        <Image  Source="{Binding MainImage}" Height="170" Width="300" 
+                            <StackPanel.Background>
+                                <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                            </StackPanel.Background>
+                            <Image  Source="{Binding MainImage}" Height="170" Width="300" 
                                 Stretch="UniformToFill" HorizontalAlignment="Center" />
                             <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" 
                                        Text="{Binding Location}"/>
@@ -42,7 +46,7 @@
                             <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" 
                                        Text="{Binding Rent}"/>
                             <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
-                                <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
+                                <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue" DataContext="{Binding Booking}" Click="Button_Click12"/>
                             </Border>
                         </StackPanel>
                     </Border>
@@ -51,78 +55,143 @@
         </GridView>
 
         <RelativePanel Grid.Row="1" HorizontalAlignment="Left">
-            <Border BorderBrush="White" BorderThickness="2" >
-                <Button Width="300" VerticalAlignment="Top"   Height="70"  Content="City" Click="Button_Click" Foreground="White" FontSize="40" />
+
+            <Border BorderBrush="Black" BorderThickness="3" >
+                <Button Width="294" VerticalAlignment="Top"   Height="70"  Content="City" Click="Button_Click" Foreground="White" FontSize="37" >
+                    <Button.Background>
+                        <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                    </Button.Background>
+                </Button>
             </Border>
         </RelativePanel>
-        
+
         <SplitView Name="MySplitView" DisplayMode="Overlay" IsPaneOpen="False" Grid.Row="1" >
             <SplitView.PaneBackground>
                 <SolidColorBrush Color="Transparent"/>
             </SplitView.PaneBackground>
             <SplitView.Pane>
                 <StackPanel Width="300" HorizontalAlignment="Left" Margin="0,75,0,0" >
-                    <Border BorderBrush="White" BorderThickness="2">
-                        <Button x:Name="Cannes" Content="Cannes" Click="Button_Click2" Foreground="White" FontSize="40"  FontFamily="Trebuchet MS" Height="70" Width="300"/>
+                    <Border BorderBrush="Black" BorderThickness="3">
+                        <Button x:Name="Cannes" Content="Cannes" Click="Button_Click2" Foreground="White" FontSize="40"  FontFamily="Trebuchet MS" Height="70" Width="300">
+                            <Button.Background>
+                                <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
                     </Border>
-                    <Border BorderBrush="White" BorderThickness="2">
-                        <Button x:Name="Chamonix" Content="Chamonix" Click="Button_Click3" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300"/>
+                    <Border BorderBrush="Black" BorderThickness="3">
+                        <Button x:Name="Chamonix" Content="Chamonix" Click="Button_Click3" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300">
+                            <Button.Background>
+                                <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
                     </Border>
-                    <Border BorderBrush="White" BorderThickness="2">
-                        <Button x:Name="Lyon" Content="Lyon" Click="Button_Click4" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300"/>
+                    <Border BorderBrush="Black" BorderThickness="3">
+                        <Button x:Name="Lyon" Content="Lyon" Click="Button_Click4" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300">
+                            <Button.Background>
+                                <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
                     </Border>
-                    <Border BorderBrush="White" BorderThickness="2">
-                        <Button x:Name="Nice" Content="Nice" Click="Button_Click5" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300"/>
+                    <Border BorderBrush="Black" BorderThickness="3">
+                        <Button x:Name="Nice" Content="Nice" Click="Button_Click5" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300">
+                            <Button.Background>
+                                <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
+
                     </Border>
                 </StackPanel>
             </SplitView.Pane>
         </SplitView>
 
         <StackPanel Grid.Column="3" Grid.Row="1" HorizontalAlignment="Right"  >
-            <Border BorderBrush="White" BorderThickness="2" Width="300">
-                <Button  Grid.Row="1" Width="300" VerticalAlignment="Top"  Height="70" Content="Apartment" Click="Button_Click1" Foreground="White" FontSize="40"/>
+            <Border BorderBrush="Black" BorderThickness="3" Width="300">
+                <Button  Grid.Row="1" Width="300" VerticalAlignment="Top"  Height="70" Content="Accommodation" Click="Button_Click1" Foreground="White" FontSize="37">
+                    <Button.Background>
+                        <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                    </Button.Background>
+                </Button>
             </Border>
         </StackPanel>
-        
+
         <SplitView Name="MyApartmentSplitView" DisplayMode="Overlay" FlowDirection="RightToLeft" IsPaneOpen="False" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Right">
             <SplitView.PaneBackground>
                 <SolidColorBrush Color="Transparent"/>
             </SplitView.PaneBackground>
             <SplitView.Pane>
                 <StackPanel Width="300" Margin="0,75,0,0" HorizontalAlignment="Left">
-                    <Border BorderBrush="White" BorderThickness="2">
-                        <Button x:Name="Cottage" Click="Button_Click6" Content="Cottage" Foreground="White" FontSize="40"  FontFamily="Trebuchet MS" Height="70" Width="300"/>
+                    <Border BorderBrush="Black" BorderThickness="3">
+                        <Button x:Name="Cottage" Click="Button_Click6" Content="Cottage" Foreground="White" FontSize="40"  FontFamily="Trebuchet MS" Height="70" Width="300">
+                            <Button.Background>
+                                <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
                     </Border>
-                    <Border BorderBrush="White" BorderThickness="2">
-                        <Button  x:Name="Flat" Content="Flat" Click="Button_Click7" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300"/>
+                    <Border BorderBrush="Black" BorderThickness="3">
+                        <Button  x:Name="Flat" Content="Flat" Click="Button_Click7" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300">
+                            <Button.Background>
+                                <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
                     </Border>
-                    <Border BorderBrush="White" BorderThickness="2">
-                        <Button x:Name="Villa" Content="Villa" Click="Button_Click8" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300"/>
+                    <Border BorderBrush="Black" BorderThickness="3">
+                        <Button x:Name="Villa" Content="Villa" Click="Button_Click8" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300">
+                            <Button.Background>
+                                <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
                     </Border>
-                    <Border BorderBrush="White" BorderThickness="2">
-                        <Button x:Name="Bungalow" Content="Bungalow" Click="Button_Click9" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300"/>
+                    <Border BorderBrush="Black" BorderThickness="3">
+                        <Button x:Name="Bungalow" Content="Bungalow" Click="Button_Click9" Foreground="White" FontSize="40" FontFamily="Trebuchet MS" Height="70" Width="300">
+                            <Button.Background>
+                                <SolidColorBrush Color="#FF1B1919" Opacity="0.74"/>
+                            </Button.Background>
+                        </Button>
                     </Border>
                 </StackPanel>
             </SplitView.Pane>
         </SplitView>
-        <SplitView Name="DisplayLogin" DisplayMode="Overlay" FlowDirection="RightToLeft" IsPaneOpen="False" Grid.Column="2" HorizontalAlignment="Right" Margin="0,50,0,0" PaneClosed="DisplayLogin_PaneClosed">
+        <SplitView Name="DisplayLogin" DisplayMode="Overlay" FlowDirection="RightToLeft" IsPaneOpen="False" Grid.Column="2" HorizontalAlignment="Right" Margin="0,0,0,0" PaneClosed="DisplayLogin_PaneClosed">
             <SplitView.PaneBackground>
                 <SolidColorBrush Color="Transparent"/>
             </SplitView.PaneBackground>
             <SplitView.Pane>
-                <StackPanel Width="200" Margin="0,0,0,0" HorizontalAlignment="Center">
-                    <Border BorderBrush="White" BorderThickness="2">
-                        <Button x:Name="Login" Content="Login" Foreground="White" FontSize="30"  FontFamily="Trebuchet MS" Height="70" Width="200" HorizontalAlignment="Center"/>
+                <StackPanel Width="324" Height="auto" Margin="0,35,0,0" HorizontalAlignment="Center" >
+                    <Border  BorderBrush="Black" BorderThickness="3" Margin="0,0,22,0">
+                        <Button x:Name="Login" Content="Customer" Foreground="White"  FontSize="27" Click="Button_Click11"  Height="42" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-2,0">
+                            <Button.Background>
+                                <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
                     </Border>
-                    <Border BorderBrush="White" BorderThickness="2">
-                        <Button x:Name="Host" Content="Host" Foreground="White" FontSize="30" Click="Button_Click10" FontFamily="Trebuchet MS" Height="70" Width="200" HorizontalAlignment="Center"/>
+                    <Border BorderBrush="Black" BorderThickness="3" Margin="0,0,22,0">
+                        <Button x:Name="Host" Content="Host" Foreground="White" FontSize="27" Click="Button_Click10" Height="42" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-2,0">
+                            <Button.Background>
+                                <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                            </Button.Background>
+                        </Button>
                     </Border>
                 </StackPanel>
             </SplitView.Pane>
             <Grid/>
         </SplitView>
-        <Border BorderBrush="White" BorderThickness="2" Grid.Column="2" Width="44" VerticalAlignment="Top" HorizontalAlignment="Right" Height="36" Margin="0,15,70,0">
-            <Button x:Name="Arrow" Content="5" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontFamily="Webdings" Click="Button_Click_1" Foreground="White"/>
+        <Border BorderBrush="Black" BorderThickness="3" Grid.Column="2" Width="300" VerticalAlignment="Top" HorizontalAlignment="Right" Height="36" Margin="0,0,0,0">
+            <Border.Background>
+                <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+            </Border.Background>
+            <TextBlock Text="User" Margin="0,0,0,0" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
         </Border>
+        <Border BorderBrush="Black" BorderThickness="3" Grid.Column="2" Width="44" VerticalAlignment="Top" HorizontalAlignment="Right" Height="36" Margin="0,0,0,0">
+            <Button x:Name="Arrow" Content="5" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontFamily="Webdings" Click="Button_Click_1" Foreground="White" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <CompositeTransform Rotation="180"/>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                </Button.Background>
+            </Button>
+        </Border>
+
+
     </Grid>
 </Page>

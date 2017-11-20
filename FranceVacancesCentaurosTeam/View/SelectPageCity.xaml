@@ -23,7 +23,7 @@
         </Grid.RowDefinitions>
        
         <Grid.Background>
-            <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill" />
+            <ImageBrush ImageSource="ms-appx:///Assets/paris-eiffel-tower-kinkade-oil-paintings.jpg" Stretch="UniformToFill" />
         </Grid.Background>
         <Grid.DataContext>
             <viewModel:AccommodationCollectionVM/>
@@ -31,15 +31,19 @@
         <Pivot Grid.Column="1" Margin="0,0,0,0" Grid.Row="1" x:Name="pivotcontrol">
             <PivotItem Header="All">
                 <GridView ItemsSource= "{Binding Accommodation}"  SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center" SelectionChanged="GridView_SelectionChanged">
+                    
                     <GridView.ItemTemplate>
                         <DataTemplate>
-                            <Border BorderThickness="2" BorderBrush="White">
+                            <Border BorderThickness="3" BorderBrush="Black">
                                 <StackPanel>
-                                        <Image   Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" Source="{Binding MainImage}" />
+                                    <StackPanel.Background>
+                                        <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                                    </StackPanel.Background>
+                                    <Image   Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" Source="{Binding MainImage}" />
                                         <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Style}"/>
                                         <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{Binding Rent}"/>
                                         <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
-                                            <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
+                                            <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue" Click="Button_Click1"/>
                                         </Border>
                                 </StackPanel>
                             </Border>
@@ -49,16 +53,20 @@
             </PivotItem>
             <PivotItem Header="Cannes" >
             <GridView ItemsSource= "{Binding filteredCannes}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
-                <GridView.ItemTemplate>
+                
+                    <GridView.ItemTemplate>
                     <DataTemplate>
-                            <Border BorderThickness="2" BorderBrush="White">
+                            <Border BorderThickness="3" BorderBrush="Black">
                                 <StackPanel>
+                                    <StackPanel.Background>
+                                        <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                                    </StackPanel.Background>
                                     <Image  Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" Source="{Binding MainImage}" />
                                     <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Location}" />
                                     <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Style}"/>
                                     <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{Binding Rent}" />
                                         <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
-                                        <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
+                                        <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue" Click="Button_Click2"/>
                                   </Border>
                                 </StackPanel>
                             </Border>
@@ -69,16 +77,20 @@
             
         <PivotItem Header="Chamonix">
             <GridView ItemsSource= "{Binding filteredChamonix}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
+                
                     <GridView.ItemTemplate>
                     <DataTemplate>
-                        <Border BorderThickness="2" BorderBrush="White">
+                        <Border BorderThickness="3" BorderBrush="Black">
                             <StackPanel>
+                                <StackPanel.Background>
+                                    <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                                </StackPanel.Background>
                                     <Image Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" Source="{Binding MainImage}" />
                                     <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Location}"/>
                                     <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Style}"/>
                                     <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{Binding Rent}"/>
                                 <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
-                                <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
+                                        <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue" Click="Button_Click3"/>
                                 </Border>
                             </StackPanel>
                         </Border>
@@ -89,16 +101,20 @@
         
         <PivotItem Header="Lyon">
             <GridView ItemsSource= "{Binding filteredLyon}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
+                
                     <GridView.ItemTemplate>
                     <DataTemplate>
-                        <Border BorderThickness="2" BorderBrush="White">
+                        <Border BorderThickness="3" BorderBrush="Black">
                             <StackPanel>
+                                <StackPanel.Background>
+                                    <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                                </StackPanel.Background>
                                     <Image Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" Source="{Binding MainImage}"/>
                                     <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Location}"/>
                                     <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Style}" />
                                     <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{Binding Rent}"/>
                                 <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
-                                    <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
+                                        <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue" Click="Button_Click4"/>
                                 </Border>
                             </StackPanel>
                         </Border>
@@ -106,19 +122,24 @@
                 </GridView.ItemTemplate>
             </GridView>
         </PivotItem>
-        
-        <PivotItem Header="Nice">
-            <GridView ItemsSource= "{Binding filteredNice}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
+
+            <PivotItem Header="Nice">
+                <GridView ItemsSource= "{Binding filteredNice}" SelectedItem="{Binding SelectedItem}" HorizontalAlignment="Center">
+                
                     <GridView.ItemTemplate>
                     <DataTemplate>
-                        <Border BorderThickness="2" BorderBrush="White">
+                        <Border BorderThickness="3" BorderBrush="Black">
                             <StackPanel>
+                                <StackPanel.Background>
+                                    <SolidColorBrush Color="#FF1B1919" Opacity="0.75"/>
+                                </StackPanel.Background>
                                     <Image Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" Source="{Binding MainImage}"/>
-                                    <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Location}"/>
+                                <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Location}"/>
+                                    
                                     <TextBlock FontSize="40"  Foreground="White" HorizontalAlignment="Center" Text="{Binding Style}" />
                                     <TextBlock FontSize="20" Foreground="White" HorizontalAlignment="Center" Text="{Binding Rent}" />
                                 <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Center">
-                                    <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue"/>
+                                        <Button Content=" Click me" Background="DarkOrange" Foreground="AliceBlue" Click="Button_Click5"/>
                                 </Border>
                             </StackPanel>
                         </Border>
@@ -127,6 +148,17 @@
             </GridView>
         </PivotItem>
       </Pivot>
-        <Button Content="Back" HorizontalAlignment="Right" Height="auto" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="auto" Click="Button_Click"/>
+        <TextBlock Text="France Vacances" Grid.Row="0" HorizontalAlignment="Center" FontSize="170" VerticalAlignment="Center" Width="auto" Height="auto" Margin="0,0,0,0" Grid.Column="1" FontFamily="Mistral" Foreground="#FFA5180A"/>
+        <Button HorizontalAlignment="Center" Height="auto" Margin="0,0,0,0" VerticalAlignment="Center" Width="auto" Click="Button_Click" Background="#00000000">
+<StackPanel>
+                <Image Height="55" Source="ms-appx:///Assets/Next_Arrow.svg.png" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <CompositeTransform Rotation="180"/>
+                    </Image.RenderTransform>
+                </Image>
+
+
+            </StackPanel>
+        </Button>
     </Grid>
 </Page>

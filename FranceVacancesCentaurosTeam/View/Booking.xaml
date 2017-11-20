@@ -23,26 +23,31 @@
         </Grid.RowDefinitions>
 
         <Grid.Background>
-            <ImageBrush ImageSource="ms-appx:///Assets/blue-wood-texture-background 2.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="ms-appx:///Assets/paris-eiffel-tower-kinkade-oil-paintings.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
+        <Button HorizontalAlignment="Center" Height="auto" Margin="0,0,0,0" VerticalAlignment="Center" Width="auto" Click="Button_Click" Background="#00000000">
+            <StackPanel>
+                <Image Height="55" Source="ms-appx:///Assets/Next_Arrow.svg.png" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <CompositeTransform Rotation="180"/>
+                    </Image.RenderTransform>
+                </Image>
 
-        <Image Source="ms-appx:///Assets/FRanceVacancesLogo1.png" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Column="1" Stretch="Uniform"/>
 
-        <RelativePanel Grid.Row="1" HorizontalAlignment="Left">
-            <Border BorderBrush="White" BorderThickness="2" >
-                <Button Width="300" VerticalAlignment="Top" Height="70"  Content="Back"  Foreground="White" FontSize="40" />
-            </Border>
-        </RelativePanel>
-        <StackPanel Grid.Column="3" Grid.Row="1" HorizontalAlignment="Right">
-            <Border BorderBrush="White" BorderThickness="2" Width="300">
-                <Button  Grid.Row="1" Width="300" VerticalAlignment="Top"  Height="70" Content="Select"  Foreground="White" FontSize="40"/>
-            </Border>
-        </StackPanel>
-        <RelativePanel   Grid.Column="1" Grid.Row="1">
+            </StackPanel>
+        </Button>
+        <TextBlock Text="France Vacances" Grid.Row="0" HorizontalAlignment="Center" FontSize="170" VerticalAlignment="Center" Width="auto" Height="auto" Margin="0,0,0,0" Grid.Column="1" FontFamily="Mistral" Foreground="#FFA5180A"/>
 
-            <Image Height="170" Width="300" Stretch="UniformToFill" HorizontalAlignment="Center" />
+        
 
-        </RelativePanel>
+      
+
+         <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1">
+            <TextBlock HorizontalAlignment="Center" Height="229" TextWrapping="WrapWholeWords" Text="Great ! You are one step away from booking this accommodation. To compete reservation please confirm down below." Width="697" Margin="0,0,0,0" FontSize="24" FontFamily="Segoe Print" Foreground="#FF8E5B5B" FontWeight="Bold" MaxWidth="700" VerticalAlignment="Top" TextAlignment="Center"/>
+            <Button Content="Complete Booking" Background="DarkOrange" Foreground="AliceBlue" VerticalAlignment="Bottom" Margin="0,0,0,0" Width="670" FontSize="20" Height="58" Click="Button_Click1">
+            </Button>
+         </StackPanel>
+        
 
 
 

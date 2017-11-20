@@ -30,7 +30,7 @@ namespace FranceVacancesCentaurosTeam.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(MainPage));
         }
     }
 }

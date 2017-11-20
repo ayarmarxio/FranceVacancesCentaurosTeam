@@ -172,7 +172,10 @@
     <Content Include="Assets\blue-wood-texture-background 2.jpg" />
     <Content Include="Assets\FRanceVacancesLogo1.png" />
     <Content Include="Assets\FranceVacancesPortrait.jpg" />
+    <Content Include="Assets\Next_Arrow.svg.png" />
+    <Content Include="Assets\paris-eiffel-tower-kinkade-oil-paintings.jpg" />
     <Content Include="Assets\Turquoise Wall.jpg" />
+    <Content Include="Assets\Untitled.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
